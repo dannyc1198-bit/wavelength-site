@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wavelength Solutions × Uptown Med Spa — Growth Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--white:#ffffff;--off:#f8f6f3;--light:#ede9e3;--border:#e2ddd6;--ink:#1a1714;--muted:#8a8278;--rose:#c97b6e;--rose-light:#f2e8e6;--rose-mid:#dba99f;--accent:#2d4a3e;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;}
+/* HERO */
+.hero{background:var(--ink);min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.hero-left{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;}
+.hero-right{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-right::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,123,110,0.15) 0%,rgba(45,74,62,0.2) 100%);}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:40px 40px;}
+.loc-pills{display:flex;flex-direction:column;gap:14px;position:relative;z-index:2;}
+.pill{border:1px solid rgba(255,255,255,0.12);padding:16px 24px;display:flex;align-items:center;gap:14px;opacity:0;animation:slideIn 0.6s forwards;}
+.pill:nth-child(1){animation-delay:0.6s}.pill:nth-child(2){animation-delay:0.75s}.pill:nth-child(3){animation-delay:0.9s}.pill:nth-child(4){animation-delay:1.05s}
+.pdot{width:7px;height:7px;border-radius:50%;background:var(--rose);flex-shrink:0;}
+.ptxt{font-family:'DM Mono',monospace;font-size:12px;color:rgba(255,255,255,0.6);letter-spacing:0.04em;}
+.ptxt strong{color:rgba(255,255,255,0.9);font-weight:500;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--rose-mid);margin-bottom:28px;opacity:0;animation:up 0.7s 0.1s forwards;}
+.hero-left h1{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,68px);font-weight:400;line-height:1.05;color:#fff;margin-bottom:20px;opacity:0;animation:up 0.7s 0.25s forwards;}
+.hero-left h1 em{font-style:italic;color:var(--rose-mid);}
+.hero-desc{font-size:15px;color:rgba(255,255,255,0.5);max-width:400px;margin-bottom:44px;line-height:1.7;opacity:0;animation:up 0.7s 0.4s forwards;}
+.hero-meta{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:rgba(255,255,255,0.25);text-transform:uppercase;opacity:0;animation:up 0.7s 0.55s forwards;}
+/* STATS BAR */
+.stats-bar{background:var(--ink);padding:0;}
+.stats-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08);}
+.stat{background:var(--ink);padding:32px 28px;text-align:center;}
+.stat-n{font-family:'Playfair Display',serif;font-size:40px;font-weight:400;font-style:italic;color:var(--rose-mid);display:block;line-height:1;margin-bottom:8px;}
+.stat-l{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);}
+/* LAYOUT */
+.wrap{max-width:960px;margin:0 auto;padding:96px 48px;}
+.sep{border:none;border-top:1px solid var(--border);}
+.stag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--rose);margin-bottom:36px;display:flex;align-items:center;gap:14px;}
+.stag::before{content:'';width:28px;height:1px;background:var(--rose);}
+h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:400;line-height:1.15;color:var(--ink);margin-bottom:24px;}
+h2 em{font-style:italic;color:var(--rose);}
+.bt{color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:16px;max-width:640px;}
+/* AUDIT */
+.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:44px 0;border:1px solid var(--border);}
+.ac{background:var(--white);padding:28px;transition:background 0.2s;}
+.ac:hover{background:var(--off);}
+.ac.gap{border-top:3px solid var(--rose);}
+.ac.win{border-top:3px solid var(--accent);}
+.atag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:12px;display:block;}
+.atag.gt{color:var(--rose)}.atag.wt{color:var(--accent)}
+.ac h4{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;color:var(--ink);margin-bottom:7px;}
+.ac p{font-size:13px;color:var(--muted);line-height:1.6;margin:0;max-width:none;}
+/* FRANCHISE BLOCK */
+.fblock{background:var(--off);border:1px solid var(--border);padding:44px;margin:44px 0;position:relative;overflow:hidden;}
+.fblock::after{content:'4×';position:absolute;right:36px;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:110px;font-style:italic;color:rgba(201,123,110,0.07);line-height:1;pointer-events:none;}
+.fblock h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:400;font-style:italic;color:var(--ink);margin-bottom:14px;}
+.fblock p{max-width:520px;}
+.loc-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px;list-style:none;}
+.loc-list li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);}
+.loc-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--rose);flex-shrink:0;}
+/* TIERS */
+.tiers{margin:44px 0;}
+.tier{border:1px solid var(--border);margin-bottom:2px;transition:border-color 0.3s;border-radius:2px;overflow:hidden;}
+.tier:hover{border-color:var(--rose-mid);}
+.tier.active{border-color:var(--rose-mid);}
+/* TIER HEADER */
+.tier-hd{display:flex;align-items:stretch;cursor:pointer;user-select:none;position:relative;}
+.tier-hd:hover{background:rgba(201,123,110,0.02);}
+.tier.active .tier-hd{background:var(--rose-light);}
+.tnum{font-family:'Playfair Display',serif;font-size:44px;font-style:italic;font-weight:400;color:var(--rose-mid);line-height:1;padding:22px 26px;flex-shrink:0;border-right:1px solid var(--border);display:flex;align-items:center;}
+.tinfo{padding:18px 22px;flex:1;}
+.tinfo h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;color:var(--ink);margin-bottom:3px;}
+.tinfo .tl{font-size:13px;color:var(--muted);font-style:italic;}
+.tprice{padding:18px 22px;text-align:right;border-left:1px solid var(--border);flex-shrink:0;min-width:210px;display:flex;flex-direction:column;justify-content:center;}
+.tprice .pa{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;color:var(--rose);display:block;line-height:1.2;}
+.tprice .pp{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;color:var(--muted);text-transform:uppercase;display:block;margin-top:3px;}
+/* CHEVRON */
+.chev-col{padding:0 18px;display:flex;align-items:center;flex-shrink:0;}
+.chev{width:26px;height:26px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);}
+.chev svg{width:10px;height:10px;fill:none;stroke:var(--rose-mid);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+.tier.active .chev{background:var(--rose);border-color:var(--rose);}
+.tier.active .chev svg{stroke:#fff;transform:rotate(180deg);}
+/* TIER BODY ACCORDION */
+.tier-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows 0.45s cubic-bezier(0.4,0,0.2,1);}
+.tier.active .tier-body{grid-template-rows:1fr;}
+.tier-body-inner{overflow:hidden;}
+.tbc{padding:0 28px 28px;border-top:1px solid var(--border);background:var(--off);}
+/* FEE BOXES */
+.fee-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);margin:22px 0 18px;}
+.fbox{background:var(--white);padding:18px 16px;text-align:center;border:1px solid var(--border);}
+.fbox.na{background:var(--off);opacity:0.55;}
+.flbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--rose);display:block;margin-bottom:8px;}
+.famt{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;font-style:italic;color:var(--ink);display:block;line-height:1.1;margin-bottom:5px;}
+.fnote{font-size:11px;color:var(--muted);display:block;line-height:1.5;}
+.fna-txt{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);display:block;margin:5px 0;}
+.inc-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);display:block;padding:14px 0 10px;border-top:1px solid var(--border);margin-top:14px;}
+/* FEATURES */
+.feat{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:9px 28px;margin-bottom:18px;}
+.feat li{font-size:13px;color:#555;padding-left:18px;position:relative;line-height:1.5;}
+.feat li::before{content:'→';position:absolute;left:0;color:var(--rose);font-size:11px;}
+/* ROI */
+.roi{border-left:3px solid var(--rose);padding:16px 20px;background:var(--rose-light);margin-top:16px;}
+.roi .rl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--rose);margin-bottom:6px;display:block;}
+.roi p{font-size:13px;color:var(--ink);margin:0;line-height:1.6;max-width:none;}
+/* BADGE */
+.badge{position:absolute;top:0;right:0;background:var(--rose);color:white;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.2em;text-transform:uppercase;padding:4px 12px;}
+/* TABLES */
+.tbl{width:100%;border-collapse:collapse;margin:36px 0;font-size:14px;}
+.tbl thead tr{background:var(--ink);}
+.tbl th{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.55);padding:13px 18px;text-align:left;}
+.tbl td{padding:14px 18px;border-bottom:1px solid var(--border);color:var(--muted);}
+.tbl tr:hover td{background:var(--off);}
+.hi{color:var(--rose);font-weight:500;}
+.tbl .tr-tot td{background:var(--rose-light);border-top:2px solid var(--rose-mid);color:var(--ink);font-weight:500;}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin:44px 0;}
+.step{background:var(--white);padding:32px 24px;transition:background 0.2s;}
+.step:hover{background:var(--off);}
+.snum{font-family:'Playfair Display',serif;font-size:50px;font-weight:400;font-style:italic;color:rgba(201,123,110,0.18);line-height:1;margin-bottom:14px;}
+.step h4{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em;font-family:'DM Mono',monospace;}
+.step p{font-size:13px;color:var(--muted);line-height:1.6;margin:0;max-width:none;}
+/* FOOTER */
+footer{background:var(--ink);padding:56px 48px;text-align:center;}
+.flogo{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:var(--rose-mid);margin-bottom:10px;}
+footer p{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,0.28);letter-spacing:0.12em;margin:0;max-width:none;}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:768px){.hero{grid-template-columns:1fr}.hero-right{display:none}.audit-grid,.feat,.steps,.fee-row,.loc-list{grid-template-columns:1fr}.stats-inner{grid-template-columns:1fr 1fr}.tprice{display:none}.wrap{padding:60px 24px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-left">
+    <p class="eyebrow">Wavelength Solutions × Uptown Med Spa</p>
+    <h1>One System.<br><em>Four Locations.</em></h1>
+    <p class="hero-desc">A franchise-wide AI automation partnership designed to capture every inquiry, convert more memberships, and reactivate clients — across BC and Ontario simultaneously.</p>
+    <p class="hero-meta">Prepared by Danny Ciampelletti &nbsp;·&nbsp; Wavelength Solutions &nbsp;·&nbsp; April 2026</p>
+  </div>
+  <div class="hero-right">
+    <div class="grid-bg"></div>
+    <div class="loc-pills">
+      <div class="pill"><div class="pdot"></div><span class="ptxt"><strong>Langley, BC</strong> — Active</span></div>
+      <div class="pill"><div class="pdot"></div><span class="ptxt"><strong>Surrey, BC</strong> — Active</span></div>
+      <div class="pill"><div class="pdot"></div><span class="ptxt"><strong>Oakville, ON</strong> — Active</span></div>
+      <div class="pill"><div class="pdot"></div><span class="ptxt"><strong>Brampton, ON</strong> — Active</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-n">4</span><span class="stat-l">Active Locations</span></div>
+    <div class="stat"><span class="stat-n">15K</span><span class="stat-l">IG Followers</span></div>
+    <div class="stat"><span class="stat-n">15K+</span><span class="stat-l">Happy Clients</span></div>
+    <div class="stat"><span class="stat-n">$0</span><span class="stat-l">Automation Today</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="stag">01 &nbsp; Business Audit</p>
+  <h2>What's Working — and <em>What's Leaking</em></h2>
+  <p class="bt">Uptown has built something rare: a multi-province med spa franchise with real client loyalty and a sophisticated membership model. The opportunity is automating what's already working so it scales without friction.</p>
+  <div class="audit-grid">
+    <div class="ac win"><span class="atag wt">✓ Strength</span><h4>Multi-Location Franchise Model</h4><p>4 locations across BC and Ontario with a proven playbook. One automation system rolls out across every location — multiplying ROI without multiplying cost.</p></div>
+    <div class="ac win"><span class="atag wt">✓ Strength</span><h4>VIP Skin Gym Membership</h4><p>The $199/year VIP base plus unlimited service tiers is a sophisticated recurring revenue structure — but it's sold manually with zero nurture automation.</p></div>
+    <div class="ac win"><span class="atag wt">✓ Strength</span><h4>15K Engaged Social Following</h4><p>@skinbyuptown drives real inquiry volume across provinces. That warm audience just needs a system to capture and convert them after hours.</p></div>
+    <div class="ac win"><span class="atag wt">✓ Strength</span><h4>Named Technician Loyalty</h4><p>Clients book specifically for Fatemeh, Jamie, and Simran. This loyalty is a retention asset that automation can amplify through personalized follow-ups.</p></div>
+    <div class="ac gap"><span class="atag gt">⚠ Gap</span><h4>Zero Cross-Location Automation</h4><p>Each location handles inquiries independently and manually. A Surrey inquiry could be rerouted to Langley — but no system exists to make that happen.</p></div>
+    <div class="ac gap"><span class="atag gt">⚠ Gap</span><h4>Membership Funnel is Broken</h4><p>VIP sign-up is entirely manual. No automated welcome sequence, no nurture flow, no non-member upgrade prompts. Interested clients go cold.</p></div>
+    <div class="ac gap"><span class="atag gt">⚠ Gap</span><h4>After-Hours Inquiry Black Hole</h4><p>Laser packages and Morpheus8 are high-consideration purchases researched at night. Without 24/7 coverage, those inquiries land nowhere until morning.</p></div>
+    <div class="ac gap"><span class="atag gt">⚠ Gap</span><h4>No Reactivation System</h4><p>Laser hair removal requires 8 sessions. Without automated follow-up, clients who lapse after session 3 start over somewhere else.</p></div>
+  </div>
+  <div class="fblock">
+    <h3>The franchise multiplier</h3>
+    <p class="bt">Most automation vendors pitch one clinic at a time. Wavelength builds one system that deploys across all your locations simultaneously — same AI, same funnels, localized per location.</p>
+    <ul class="loc-list">
+      <li>Langley, BC — 19933 88 Ave #100</li>
+      <li>Surrey, BC — Active location</li>
+      <li>Oakville, ON — Active location</li>
+      <li>Brampton, ON — Active location</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="sep">
+
+<div class="wrap">
+  <p class="stag">02 &nbsp; Partnership Tiers</p>
+  <h2>Built for a Brand <em>That's Scaling</em></h2>
+  <p class="bt">Every tier shows the complete fee picture — install fee, monthly fee, and retainer where applicable. Multi-location pricing noted where relevant.</p>
+
+  <div class="tiers">
+
+    <div class="tier active" id="t1">
+      <div class="tier-hd" onclick="tog('t1')">
+        <span class="tnum">1</span>
+        <div class="tinfo"><h3>Always-On Receptionist</h3><span class="tl">24/7 inquiry capture across every location</span></div>
+        <div class="tprice"><span class="pa">From $1,500 install</span><span class="pp">+ $700–$900 / month per location</span></div>
+        <div class="chev-col"><div class="chev"><svg viewBox="0 0 12 8"><polyline points="1,1 6,7 11,1"/></svg></div></div>
+      </div>
+      <div class="tier-body">
+        <div class="tier-body-inner">
+          <div class="tbc">
+            <div class="fee-row">
+              <div class="fbox"><span class="flbl">Install Fee</span><span class="famt">$1,500–$2,500</span><span class="fnote">Per location. AI build, JaneApp integration, knowledge base training & launch</span></div>
+              <div class="fbox"><span class="flbl">Monthly Fee</span><span class="famt">$700–$900</span><span class="fnote">Per location. Monitoring, maintenance, updates & support included</span></div>
+              <div class="fbox na"><span class="flbl">Retainer</span><span class="fna-txt">— Not applicable —</span><span class="fnote">Strategy support included in monthly at this tier</span></div>
+            </div>
+            <span class="inc-lbl">What's included</span>
+            <ul class="feat">
+              <li>AI voice agent handles after-hours calls at each location</li>
+              <li>Answers treatment FAQs, pricing, and availability questions</li>
+              <li>Books directly into JaneApp scheduling system</li>
+              <li>Instagram DM auto-response captures @skinbyuptown inquiries</li>
+              <li>Intelligent location routing — directs clients to nearest open location</li>
+              <li>Branded to Uptown's tone — warm, professional, luxury feel</li>
+            </ul>
+            <div class="roi"><span class="rl">ROI Snapshot</span><p>Across 4 locations, even 2 recovered bookings per location per month = 8 bookings. At $250 avg that's $2,000/mo recovered — covering this tier more than twice over. Install recovered in under 3 weeks.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tier" id="t2">
+      <span class="badge">Recommended</span>
+      <div class="tier-hd" onclick="tog('t2')">
+        <span class="tnum">2</span>
+        <div class="tinfo"><h3>Membership & Nurture Engine</h3><span class="tl">Convert followers into VIP members, members into loyal advocates</span></div>
+        <div class="tprice"><span class="pa">From $3,500 install</span><span class="pp">+ $1,500–$2,000/mo + $400 retainer</span></div>
+        <div class="chev-col"><div class="chev"><svg viewBox="0 0 12 8"><polyline points="1,1 6,7 11,1"/></svg></div></div>
+      </div>
+      <div class="tier-body">
+        <div class="tier-body-inner">
+          <div class="tbc">
+            <div class="fee-row">
+              <div class="fbox"><span class="flbl">Install Fee</span><span class="famt">$3,500–$5,000</span><span class="fnote">One-time base. +$800–$1,200 per additional location beyond the first</span></div>
+              <div class="fbox"><span class="flbl">Monthly Fee</span><span class="famt">$1,500–$2,000</span><span class="fnote">All locations. System management, optimization & monthly reporting</span></div>
+              <div class="fbox"><span class="flbl">Retainer</span><span class="famt">$400/mo</span><span class="fnote">Monthly strategy review, campaign adjustments & priority support</span></div>
+            </div>
+            <span class="inc-lbl">What's included</span>
+            <ul class="feat">
+              <li>Everything in Tier 1</li>
+              <li>VIP Skin Gym membership inquiry automation (3-touch sequence)</li>
+              <li>Post-visit follow-up personalized per treatment and technician</li>
+              <li>Non-member upgrade sequences — identify 2+ visit clients, pitch VIP</li>
+              <li>Laser package reactivation (clients who stopped mid-course)</li>
+              <li>Instagram DM lead qualification and treatment-specific nurture</li>
+              <li>Cross-location referral flow — "our Surrey location has availability"</li>
+              <li>Monthly performance report across all locations</li>
+            </ul>
+            <div class="roi"><span class="rl">ROI Snapshot</span><p>Converting 5 new VIP members/month across all locations = $995/mo new MRR. Recovering 3 lapsed laser clients per location at $265/session = $3,180/mo recaptured. Pays for itself inside 2 weeks.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tier" id="t3">
+      <div class="tier-hd" onclick="tog('t3')">
+        <span class="tnum">3</span>
+        <div class="tinfo"><h3>Franchise Growth Stack</h3><span class="tl">Complete automation infrastructure for a national brand</span></div>
+        <div class="tprice"><span class="pa">From $6,500 install</span><span class="pp">+ $3,000–$4,000/mo + $750 retainer</span></div>
+        <div class="chev-col"><div class="chev"><svg viewBox="0 0 12 8"><polyline points="1,1 6,7 11,1"/></svg></div></div>
+      </div>
+      <div class="tier-body">
+        <div class="tier-body-inner">
+          <div class="tbc">
+            <div class="fee-row">
+              <div class="fbox"><span class="flbl">Install Fee</span><span class="famt">$6,500–$9,500</span><span class="fnote">One-time. Full franchise stack — all 4 locations, all systems, onboarding kit & launch</span></div>
+              <div class="fbox"><span class="flbl">Monthly Fee</span><span class="famt">$3,000–$4,000</span><span class="fnote">All locations. Full system management, all campaigns & optimization</span></div>
+              <div class="fbox"><span class="flbl">Retainer</span><span class="famt">$750/mo</span><span class="fnote">Bi-weekly strategy calls, new campaign builds & dedicated account manager</span></div>
+            </div>
+            <span class="inc-lbl">What's included</span>
+            <ul class="feat">
+              <li>Everything in Tiers 1 & 2</li>
+              <li>Morpheus8 & RF microneedling post-treatment sequences</li>
+              <li>Full-body laser package completion automation (sessions 5–8)</li>
+              <li>Google review generation — automated 48hr post-visit trigger</li>
+              <li>Seasonal campaigns synced across all 4 locations</li>
+              <li>New franchisee onboarding automation kit</li>
+              <li>VIP member birthday reward delivery automation</li>
+              <li>Client lifetime value scoring — flags high-value clients</li>
+              <li>Bi-weekly strategy calls + dedicated Wavelength account manager</li>
+            </ul>
+            <div class="roi"><span class="rl">ROI Snapshot</span><p>Full-body laser reactivation — 10 clients per location completing their $1,400/yr plan = $56,000/yr recovered across 4 locations. Review automation compounds organic search with zero ad spend.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="sep">
+
+<div class="wrap">
+  <p class="stag">03 &nbsp; Revenue Impact</p>
+  <h2>The Numbers <em>Across All Four</em></h2>
+  <p class="bt">Conservative monthly estimates based on Uptown's pricing and multi-location volume. Assumes the lowest reasonable conversion rates.</p>
+  <table class="tbl">
+    <thead><tr><th>Revenue Lever</th><th>Per Location</th><th>Avg Value</th><th>Monthly (All 4)</th></tr></thead>
+    <tbody>
+      <tr><td>Recovered after-hours bookings</td><td>2/mo</td><td>$250</td><td class="hi">$2,000</td></tr>
+      <tr><td>Instagram DM conversions</td><td>3/mo</td><td>$200</td><td class="hi">$2,400</td></tr>
+      <tr><td>New VIP members</td><td>2/mo</td><td>$199/yr</td><td class="hi">$133 MRR</td></tr>
+      <tr><td>Laser package reactivation</td><td>3/mo</td><td>$265/session</td><td class="hi">$3,180</td></tr>
+      <tr><td>Facial membership conversions</td><td>2/mo</td><td>$1,100/yr plan</td><td class="hi">$733 MRR</td></tr>
+      <tr><td>Cross-location referrals</td><td>1/mo</td><td>$300</td><td class="hi">$1,200</td></tr>
+      <tr class="tr-tot"><td colspan="3" style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase">Conservative Monthly Recovered Revenue</td><td class="hi" style="font-size:20px;font-family:'Playfair Display',serif;font-style:italic">$9,646+</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="sep">
+
+<div class="wrap">
+  <p class="stag">04 &nbsp; Year One Investment</p>
+  <h2>Full Picture <em>by Tier</em></h2>
+  <p class="bt">Install fee paid once. Monthly fee and retainer are recurring. Totals reflect 12 months across all 4 locations.</p>
+  <table class="tbl">
+    <thead><tr><th>Tier</th><th>Install (one-time)</th><th>Monthly + Retainer</th><th>Year 1 Total</th></tr></thead>
+    <tbody>
+      <tr><td>Tier 1 — Receptionist (all 4)</td><td>$8,000 avg</td><td>$800/mo per location</td><td class="hi">$46,400</td></tr>
+      <tr><td>Tier 2 — Nurture Engine</td><td>$4,250 avg</td><td>$1,900/mo total</td><td class="hi">$27,050</td></tr>
+      <tr><td>Tier 3 — Franchise Stack</td><td>$8,000 avg</td><td>$4,250/mo total</td><td class="hi">$59,000</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="sep">
+
+<div class="wrap">
+  <p class="stag">05 &nbsp; How We Start</p>
+  <h2>Prove It in <em>Langley First</em></h2>
+  <div class="steps">
+    <div class="step"><div class="snum">01</div><h4>Discovery Call</h4><p>15 minutes with Danny and whoever runs operations. Walk through the audit, confirm priorities, identify the Langley pilot.</p></div>
+    <div class="step"><div class="snum">02</div><h4>Langley Pilot</h4><p>Tier 1 deployed at Langley within 7 days. 30 days of data — recovered bookings, DM captures, membership inquiries — all tracked and reported back to you.</p></div>
+    <div class="step"><div class="snum">03</div><h4>Franchise Rollout</h4><p>Once Langley proves ROI, the same system rolls to Surrey, Oakville, and Brampton. One conversation becomes a national partnership.</p></div>
+  </div>
+</div>
+
+<hr class="sep">
+
+<footer>
+  <div class="flogo">Wavelength Solutions</div>
+  <p>Danny Ciampelletti &nbsp;·&nbsp; Fort Langley, BC &nbsp;·&nbsp; wavelengthsolutions.co</p>
+  <p style="margin-top:6px;">skinbyuptown@gmail.com &nbsp;·&nbsp; 778-322-7262 &nbsp;·&nbsp; @skinbyuptown</p>
+</footer>
+
+<script>
+function tog(id) {
+  const el = document.getElementById(id);
+  const wasActive = el.classList.contains('active');
+  document.querySelectorAll('.tier').forEach(t => t.classList.remove('active'));
+  if (!wasActive) el.classList.add('active');
+}
+</script>
+</body>
+</html>
