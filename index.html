@@ -523,6 +523,42 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
   let history=[];
   let sending=false;
 
+  const KB=[
+    {k:['price','cost','how much','pricing','fee','invest','pay','afford','budget','rate'],
+     r:"Great question! Our AI Receptionist starts at $1,500\u2013$2,500 for the install and $600\u2013$800/month. We also have higher tiers that include membership funnels, reactivation sequences, and full growth automation. Want me to connect you with Danny to walk through which tier fits your business? Call or text (236) 205-0807."},
+    {k:['tier','plan','package','option','level'],
+     r:"We have three tiers: Tier 1 is the Always-On Receptionist ($600\u2013$800/mo), Tier 2 adds smart funnels and follow-up automation ($1,200\u2013$1,500/mo), and Tier 3 is the full AI Growth Stack ($2,500\u2013$3,000/mo). We also do custom Enterprise pricing for multi-location businesses. Danny can help you figure out the right fit \u2014 (236) 205-0807."},
+    {k:['receptionist','call','phone','voice','answer','after hour','24/7','miss'],
+     r:"Our AI Receptionist answers your calls and messages 24/7 \u2014 after hours, weekends, holidays. It handles FAQs, books appointments directly into your scheduling system, and does warm handoffs for urgent calls. Branded to sound like your business. Most clients see ROI within the first 2 weeks."},
+    {k:['how','work','process','start','begin','get started','next step','onboard'],
+     r:"Simple: we start with a free 15-minute discovery call where Danny audits your current setup. If it's a fit, we build your system in 7\u201314 days, and you start seeing results immediately. No long contracts \u2014 month-to-month. Want to book that call? Reach Danny at (236) 205-0807 or danciampelletti@wavelengthsolutions.co"},
+    {k:['guarantee','risk','refund','promise','what if'],
+     r:"We offer a 30-day performance guarantee: if the system doesn't generate at least 5 new bookings or qualified leads in the first 30 days, we refund your setup fee completely AND keep running it free for another month. Zero risk."},
+    {k:['who','what business','industry','niche','serve','client','work with'],
+     r:"We work with high-end service businesses across Canada \u2014 med spas, aesthetic clinics, wellness centres, premium salons, home services, property management, and multi-location franchises. Basically any business where a missed inquiry means real revenue lost."},
+    {k:['danny','founder','team','who are you','about'],
+     r:"Wavelength Solutions was founded by Danny Ciampelletti, based in Fort Langley, BC. Danny builds custom AI automation systems that help service businesses capture every inquiry and grow without adding staff. You can reach him directly at (236) 205-0807."},
+    {k:['book','call','meet','schedule','appointment','talk','consult','demo'],
+     r:"I'd love to get you connected with Danny for a free 15-minute discovery call! You can reach him directly at (236) 205-0807, email danciampelletti@wavelengthsolutions.co, or DM us on Instagram @wavelengthsolutions."},
+    {k:['audit','enterprise','compliance','security','workflow','corporate'],
+     r:"We also offer enterprise-level AI auditing and workflow innovation for larger organizations \u2014 including compliance mapping, security assessments, and custom AI workflow builds. These are scoped individually. Reach out to Danny to discuss: (236) 205-0807."},
+    {k:['hi','hello','hey','sup','yo','good morning','good evening'],
+     r:"Hey there! Welcome to Wavelength Solutions. I can tell you about our services, pricing, or help you get in touch with Danny for a free business audit. What are you curious about?"},
+  ];
+
+  const FALLBACK="That's a great question \u2014 Danny can give you a much better answer on a quick call. Want to reach out? Call or text (236) 205-0807, or email danciampelletti@wavelengthsolutions.co. He usually responds within the hour.";
+
+  function matchKB(text){
+    const t=text.toLowerCase();
+    let best=null,bestScore=0;
+    for(const entry of KB){
+      let score=0;
+      for(const k of entry.k){if(t.includes(k))score++;}
+      if(score>bestScore){bestScore=score;best=entry;}
+    }
+    return bestScore>0?best.r:FALLBACK;
+  }
+
   btn.addEventListener('click',()=>{
     btn.classList.toggle('open');
     chat.classList.toggle('open');
@@ -559,17 +595,19 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({messages:history})
       });
+      if(!res.ok)throw new Error('API unavailable');
       const data=await res.json();
       typing.remove();
       if(data.reply){
         history.push({role:'assistant',content:data.reply});
         addMsg(data.reply,'bot');
-      }else{
-        addMsg('Sorry, something went wrong. You can reach Danny directly at (236) 205-0807.','bot');
-      }
+      }else{throw new Error('empty');}
     }catch(e){
       typing.remove();
-      addMsg('Connection issue. You can reach Danny directly at (236) 205-0807 or danciampelletti@wavelengthsolutions.co','bot');
+      // Smart fallback using keyword matching
+      const reply=matchKB(text);
+      history.push({role:'assistant',content:reply});
+      addMsg(reply,'bot');
     }
     sending=false;
     send.disabled=false;
