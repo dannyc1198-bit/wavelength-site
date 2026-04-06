@@ -175,6 +175,30 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
 @keyframes pulse{0%,100%{transform:translate(-50%,-55%) scale(1)}50%{transform:translate(-50%,-55%) scale(1.06)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
 
+/* DEMO STRIP */
+.demo-strip{background:linear-gradient(135deg,rgba(120,100,255,0.07) 0%,rgba(78,205,196,0.04) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.demo-strip-inner{max-width:1080px;margin:0 auto;padding:28px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.demo-left{display:flex;align-items:center;gap:18px;}
+.demo-icon{font-size:28px;flex-shrink:0;line-height:1;}
+.demo-title{font-size:16px;font-weight:600;color:var(--white);margin-bottom:4px;letter-spacing:0.01em;}
+.demo-sub{font-size:13px;color:var(--muted);line-height:1.55;max-width:480px;}
+.demo-cta{white-space:nowrap;flex-shrink:0;}
+
+/* LEAD CAPTURE CARD */
+.wl-lead-card{background:rgba(120,100,255,0.07);border:1px solid rgba(120,100,255,0.28);border-radius:12px;padding:16px;margin:4px 0;align-self:stretch;}
+.wl-lead-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:3px;}
+.wl-lead-sub{font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.5;}
+.wl-lead-fields{display:flex;flex-direction:column;gap:8px;margin-bottom:10px;}
+.wl-lead-inp{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 12px;color:var(--text);font-family:'Syne',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s;}
+.wl-lead-inp:focus{border-color:var(--wave);}
+.wl-lead-inp.err{border-color:rgba(255,80,80,0.55);}
+.wl-lead-actions{display:flex;gap:8px;align-items:center;}
+.wl-lead-submit{background:var(--wave);color:white;border:none;padding:8px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Syne',sans-serif;transition:background 0.2s;letter-spacing:0.04em;}
+.wl-lead-submit:hover{background:var(--wave-light);}
+.wl-lead-skip{background:none;border:none;color:var(--muted);padding:4px 8px;font-size:12px;cursor:pointer;font-family:'Syne',sans-serif;transition:color 0.2s;text-decoration:underline;text-underline-offset:2px;}
+.wl-lead-skip:hover{color:var(--text);}
+.wl-lead-success{font-size:13px;color:var(--text);line-height:1.6;}
+
 @media(max-width:768px){
   nav{padding:14px 24px;}
   .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,16,0.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:28px;z-index:100;}
@@ -187,6 +211,8 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
   .tsum{display:none;}
   .pricing-intro{grid-template-columns:1fr;}
   footer{flex-direction:column;padding:28px 24px;}
+  .demo-strip-inner{padding:20px 24px;}
+  .demo-cta{width:100%;text-align:center;}
 }
 </style>
 </head>
@@ -227,6 +253,20 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
     <div class="proof-item"><div class="proof-dot"></div>Multi-Location Franchises</div>
   </div>
 </section>
+
+<!-- DEMO STRIP -->
+<div class="demo-strip">
+  <div class="demo-strip-inner">
+    <div class="demo-left">
+      <span class="demo-icon">📞</span>
+      <div>
+        <div class="demo-title">Hear it yourself — call our AI demo right now</div>
+        <div class="demo-sub">This is the actual product we build for our clients. Call the number, have a real conversation, try to book an appointment. It's fully autonomous.</div>
+      </div>
+    </div>
+    <a href="tel:+13607451628" class="btn-primary demo-cta">Call Demo &nbsp;&bull;&nbsp; +1 (360) 745-1628</a>
+  </div>
+</div>
 
 <hr class="sep">
 
@@ -433,6 +473,7 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
     <li><a href="#contact">Contact</a></li>
     <li><a href="tel:+12362050807">+1 (236) 205-0807</a></li>
     <li><a href="mailto:danciampelletti@wavelengthsolutions.co">danciampelletti@wavelengthsolutions.co</a></li>
+    <li><a href="/privacy.html">Privacy Policy</a></li>
   </ul>
   <div class="foot-copy">&copy; 2026 Wavelength Solutions &middot; Fort Langley, BC</div>
 </footer>
@@ -515,15 +556,21 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
 
 <script>
 (function(){
-  const btn=document.getElementById('wl-chat-btn');
-  const chat=document.getElementById('wl-chat');
-  const msgs=document.getElementById('wl-msgs');
-  const inp=document.getElementById('wl-input');
-  const send=document.getElementById('wl-send');
-  let history=[];
-  let sending=false;
+  var CAL_URL = 'https://cal.com/daniel-ciampelletti-r2i2t4';
 
-  const KB=[
+  var btn  = document.getElementById('wl-chat-btn');
+  var chat = document.getElementById('wl-chat');
+  var msgs = document.getElementById('wl-msgs');
+  var inp  = document.getElementById('wl-input');
+  var send = document.getElementById('wl-send');
+
+  var history      = [];
+  var sending      = false;
+  var botMsgCount  = 0;
+  var leadCaptured = false;
+
+  // ── Offline keyword fallbacks ─────────────────────────────────────────────
+  var KB = [
     {k:['price','cost','how much','pricing','fee','invest','pay','afford','budget','rate'],
      r:"Great question! Our AI Receptionist starts at $1,500\u2013$2,500 for the install and $600\u2013$800/month. We also have higher tiers that include membership funnels, reactivation sequences, and full growth automation. Want me to connect you with Danny to walk through which tier fits your business? Call or text (236) 205-0807."},
     {k:['tier','plan','package','option','level'],
@@ -531,91 +578,186 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
     {k:['receptionist','call','phone','voice','answer','after hour','24/7','miss'],
      r:"Our AI Receptionist answers your calls and messages 24/7 \u2014 after hours, weekends, holidays. It handles FAQs, books appointments directly into your scheduling system, and does warm handoffs for urgent calls. Branded to sound like your business. Most clients see ROI within the first 2 weeks."},
     {k:['how','work','process','start','begin','get started','next step','onboard'],
-     r:"Simple: we start with a free 15-minute discovery call where Danny audits your current setup. If it's a fit, we build your system in 7\u201314 days, and you start seeing results immediately. No long contracts \u2014 month-to-month. Want to book that call? Reach Danny at (236) 205-0807 or danciampelletti@wavelengthsolutions.co"},
+     r:"Simple: we start with a free 15-minute discovery call where Danny audits your current setup. If it\u2019s a fit, we build your system in 7\u201314 days, and you start seeing results immediately. No long contracts \u2014 month-to-month. Want to book that call? Reach Danny at (236) 205-0807 or danciampelletti@wavelengthsolutions.co"},
     {k:['guarantee','risk','refund','promise','what if'],
-     r:"We offer a 30-day performance guarantee: if the system doesn't generate at least 5 new bookings or qualified leads in the first 30 days, we refund your setup fee completely AND keep running it free for another month. Zero risk."},
+     r:"We offer a 30-day performance guarantee: if the system doesn\u2019t generate at least 5 new bookings or qualified leads in the first 30 days, we refund your setup fee completely AND keep running it free for another month. Zero risk."},
     {k:['who','what business','industry','niche','serve','client','work with'],
      r:"We work with high-end service businesses across Canada \u2014 med spas, aesthetic clinics, wellness centres, premium salons, home services, property management, and multi-location franchises. Basically any business where a missed inquiry means real revenue lost."},
     {k:['danny','founder','team','who are you','about'],
      r:"Wavelength Solutions was founded by Danny Ciampelletti, based in Fort Langley, BC. Danny builds custom AI automation systems that help service businesses capture every inquiry and grow without adding staff. You can reach him directly at (236) 205-0807."},
     {k:['book','call','meet','schedule','appointment','talk','consult','demo'],
-     r:"I'd love to get you connected with Danny! You can book a free discovery call right now at cal.com/daniel-ciampelletti-r2i2t4, or reach him directly at (236) 205-0807."},
+     r:"I\u2019d love to get you connected with Danny! You can book a free discovery call right now at " + CAL_URL + ", or reach him directly at (236) 205-0807."},
     {k:['audit','enterprise','compliance','security','workflow','corporate'],
      r:"We also offer enterprise-level AI auditing and workflow innovation for larger organizations \u2014 including compliance mapping, security assessments, and custom AI workflow builds. These are scoped individually. Reach out to Danny to discuss: (236) 205-0807."},
     {k:['hi','hello','hey','sup','yo','good morning','good evening'],
      r:"Hey there! Welcome to Wavelength Solutions. I can tell you about our services, pricing, or help you get in touch with Danny for a free business audit. What are you curious about?"},
   ];
+  var FALLBACK = "That\u2019s a great question \u2014 Danny can give you a much better answer on a quick call. Want to reach out? Call or text (236) 205-0807, or email danciampelletti@wavelengthsolutions.co. He usually responds within the hour.";
 
-  const FALLBACK="That's a great question \u2014 Danny can give you a much better answer on a quick call. Want to reach out? Call or text (236) 205-0807, or email danciampelletti@wavelengthsolutions.co. He usually responds within the hour.";
-
-  function matchKB(text){
-    const t=text.toLowerCase();
-    let best=null,bestScore=0;
-    for(const entry of KB){
-      let score=0;
-      for(const k of entry.k){if(t.includes(k))score++;}
-      if(score>bestScore){bestScore=score;best=entry;}
+  function matchKB(text) {
+    var t = text.toLowerCase(), best = null, bestScore = 0;
+    for (var i = 0; i < KB.length; i++) {
+      var score = 0;
+      for (var j = 0; j < KB[i].k.length; j++) { if (t.includes(KB[i].k[j])) score++; }
+      if (score > bestScore) { bestScore = score; best = KB[i]; }
     }
-    return bestScore>0?best.r:FALLBACK;
+    return bestScore > 0 ? best.r : FALLBACK;
   }
 
-  btn.addEventListener('click',()=>{
+  // ── Lead capture card (built with DOM methods — no innerHTML) ─────────────
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function inp2(cls, id, type, placeholder, maxlength, autocomplete) {
+    var e = document.createElement('input');
+    e.className = cls; e.id = id; e.type = type || 'text';
+    e.placeholder = placeholder; e.maxLength = maxlength;
+    if (autocomplete) e.autocomplete = autocomplete;
+    return e;
+  }
+  function btn2(cls, id, text) {
+    var e = document.createElement('button');
+    e.className = cls; e.id = id; e.type = 'button'; e.textContent = text;
+    return e;
+  }
+
+  function injectLeadCapture() {
+    if (leadCaptured) return;
+    var card   = el('div', 'wl-lead-card');
+    card.id    = 'wl-lead-card';
+    var title  = el('div', 'wl-lead-title', 'Want Danny to follow up with you?');
+    var sub    = el('div', 'wl-lead-sub',   'Leave your info and he\u2019ll reach out within the hour.');
+    var fields = el('div', 'wl-lead-fields');
+    var nameEl = inp2('wl-lead-inp', 'wl-lead-name', 'text', 'Your name', 100, 'name');
+    var emailEl= inp2('wl-lead-inp', 'wl-lead-email','email','your@email.com',200,'email');
+    var actions= el('div', 'wl-lead-actions');
+    var submitBtn = btn2('wl-lead-submit', 'wl-lead-submit', 'Send \u2192');
+    var skipBtn   = btn2('wl-lead-skip',   'wl-lead-skip',   'No thanks');
+
+    fields.appendChild(nameEl);
+    fields.appendChild(emailEl);
+    actions.appendChild(submitBtn);
+    actions.appendChild(skipBtn);
+    card.appendChild(title);
+    card.appendChild(sub);
+    card.appendChild(fields);
+    card.appendChild(actions);
+    msgs.appendChild(card);
+    msgs.scrollTop = msgs.scrollHeight;
+
+    submitBtn.addEventListener('click', submitLead);
+    skipBtn.addEventListener('click', function() { card.remove(); leadCaptured = true; });
+    emailEl.addEventListener('keydown', function(e) { if (e.key === 'Enter') submitLead(); });
+  }
+
+  function submitLead() {
+    var nameEl  = document.getElementById('wl-lead-name');
+    var emailEl = document.getElementById('wl-lead-email');
+    var name    = nameEl  ? nameEl.value.trim()  : '';
+    var email   = emailEl ? emailEl.value.trim() : '';
+
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      if (emailEl) { emailEl.classList.add('err'); emailEl.focus(); }
+      return;
+    }
+
+    var context = history.slice(-4).map(function(m) {
+      return m.role + ': ' + m.content;
+    }).join('\n').slice(0, 500);
+
+    fetch('/.netlify/functions/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, context: context }),
+    }).catch(function() {});
+
+    leadCaptured = true;
+    var card = document.getElementById('wl-lead-card');
+    if (card) {
+      var firstName = name ? ', ' + name.split(' ')[0] : '';
+      var success = el('div', 'wl-lead-success');
+      // Build success message with safe DOM nodes (no innerHTML)
+      success.appendChild(document.createTextNode('Got it' + firstName + '! Danny will be in touch at '));
+      var strong = document.createElement('strong');
+      strong.textContent = email;
+      success.appendChild(strong);
+      success.appendChild(document.createTextNode(' shortly.'));
+      while (card.firstChild) card.removeChild(card.firstChild);
+      card.appendChild(success);
+      setTimeout(function() { if (card.parentNode) card.remove(); }, 5000);
+    }
+  }
+
+  // ── UI helpers ────────────────────────────────────────────────────────────
+  btn.addEventListener('click', function() {
     btn.classList.toggle('open');
     chat.classList.toggle('open');
-    if(chat.classList.contains('open'))inp.focus();
+    if (chat.classList.contains('open')) inp.focus();
   });
 
-  function addMsg(text,role){
-    const d=document.createElement('div');
-    d.className='wl-msg '+(role==='user'?'user':'bot');
-    d.textContent=text;
+  function addMsg(text, role) {
+    var d = document.createElement('div');
+    d.className = 'wl-msg ' + (role === 'user' ? 'user' : 'bot');
+    d.textContent = text;
     msgs.appendChild(d);
-    msgs.scrollTop=msgs.scrollHeight;
+    msgs.scrollTop = msgs.scrollHeight;
+    if (role !== 'user') {
+      botMsgCount++;
+      if (botMsgCount === 3) { setTimeout(injectLeadCapture, 400); }
+    }
     return d;
   }
 
-  async function sendMsg(){
-    const text=inp.value.trim();
-    if(!text||sending)return;
-    sending=true;
-    send.disabled=true;
-    inp.value='';
-    addMsg(text,'user');
-    history.push({role:'user',content:text});
+  // ── Send message ──────────────────────────────────────────────────────────
+  async function sendMsg() {
+    var text = inp.value.trim();
+    if (!text || sending) return;
+    sending = true;
+    send.disabled = true;
+    inp.value = '';
+    addMsg(text, 'user');
+    history.push({ role: 'user', content: text });
 
-    const typing=document.createElement('div');
-    typing.className='wl-msg bot typing';
-    typing.textContent='Thinking...';
+    var typing = document.createElement('div');
+    typing.className = 'wl-msg bot typing';
+    typing.textContent = 'Thinking\u2026';
     msgs.appendChild(typing);
-    msgs.scrollTop=msgs.scrollHeight;
+    msgs.scrollTop = msgs.scrollHeight;
 
-    try{
-      const res=await fetch('/.netlify/functions/chat',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({messages:history})
+    try {
+      var res = await fetch('/.netlify/functions/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: history }),
       });
-      if(!res.ok)throw new Error('API unavailable');
-      const data=await res.json();
+      if (!res.ok) throw new Error('unavailable');
+      var data = await res.json();
       typing.remove();
-      if(data.reply){
-        history.push({role:'assistant',content:data.reply});
-        addMsg(data.reply,'bot');
-      }else{throw new Error('empty');}
-    }catch(e){
+      if (data.reply) {
+        history.push({ role: 'assistant', content: data.reply });
+        addMsg(data.reply, 'bot');
+      } else {
+        throw new Error('empty');
+      }
+    } catch(e) {
       typing.remove();
-      // Smart fallback using keyword matching
-      const reply=matchKB(text);
-      history.push({role:'assistant',content:reply});
-      addMsg(reply,'bot');
+      var reply = matchKB(text);
+      history.push({ role: 'assistant', content: reply });
+      addMsg(reply, 'bot');
     }
-    sending=false;
-    send.disabled=false;
+
+    sending = false;
+    send.disabled = false;
     inp.focus();
   }
 
-  send.addEventListener('click',sendMsg);
-  inp.addEventListener('keydown',(e)=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg();}});
+  send.addEventListener('click', sendMsg);
+  inp.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMsg(); }
+  });
 })();
 </script>
 </body>
