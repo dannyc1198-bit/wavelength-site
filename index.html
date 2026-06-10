@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wavelength Solutions — AI Automation for High-End Service Businesses</title>
-<meta name="description" content="Wavelength Solutions builds AI receptionists, automation funnels, and growth systems for med spas and high-end service businesses across Canada.">
+<title>Wavelength Solutions | AI Receptionists &amp; Growth Systems for Service Businesses</title>
+<meta name="description" content="Wavelength Solutions builds AI receptionists, automation funnels, managed ads, and websites for service businesses across Canada. Call our live AI line and hear the product yourself.">
+<link rel="canonical" href="https://wavelengthsolutions.co/">
+<meta property="og:title" content="Wavelength Solutions | Never Lose Another Client to a Missed Call">
+<meta property="og:description" content="AI receptionists, growth automation, managed ads, and websites for service businesses. Call the live AI demo line: +1 (360) 745-1628.">
+<meta property="og:image" content="https://wavelengthsolutions.co/assets/wavelength-brand.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080810'/%3E%3Crect x='1.5' y='1.5' width='29' height='29' rx='6' fill='none' stroke='%237864ff' stroke-width='2'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-size='16' font-weight='800' fill='%23a394ff'%3EW%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne+Mono&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -12,7 +18,7 @@
   --border:rgba(120,100,255,0.15);--border-s:rgba(120,100,255,0.35);
   --wave:#7864ff;--wave-light:#a394ff;--wave-glow:rgba(120,100,255,0.12);
   --gold:#e8c97a;--gold-dim:rgba(232,201,122,0.6);
-  --text:#eeeef4;--muted:#6e6e88;--white:#ffffff;
+  --text:#eeeef4;--muted:#8a8aa4;--white:#ffffff;
   --teal:#4ecdc4;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -24,16 +30,14 @@ body{background:var(--bg);color:var(--text);font-family:"Syne",sans-serif;font-w
 body::before{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.4;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,16,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,16,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .logo-mark{width:30px;height:30px;border:1.5px solid var(--wave);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--wave-light);}
 .nav-logo-text{font-size:14px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none;}
 .nav-links a{font-size:13px;font-weight:500;letter-spacing:0.04em;color:var(--muted);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--text);}
-.nav-phone{color:var(--muted);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;}
-.nav-phone:hover{color:var(--text);}
-.nav-cta{background:var(--wave)!important;color:var(--white)!important;padding:9px 20px;border-radius:4px;font-size:13px;font-weight:600;transition:all 0.2s;}
+.nav-cta{background:var(--wave)!important;color:var(--white)!important;padding:9px 18px;border-radius:6px;font-size:13px;font-weight:600;transition:all 0.2s;}
 .nav-cta:hover{background:var(--wave-light)!important;transform:translateY(-1px);}
 .ham{display:none;background:none;border:none;cursor:pointer;padding:4px;z-index:101;}
 .ham span{display:block;width:22px;height:1.5px;background:var(--text);margin:5px 0;transition:all 0.3s;}
@@ -41,74 +45,122 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:fl
 .ham.open span:nth-child(2){opacity:0;}
 .ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
 
-/* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:140px 48px 100px;position:relative;overflow:hidden;}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(120,100,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(120,100,255,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);}
-.hero-orb{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(120,100,255,0.16) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-55%);pointer-events:none;animation:pulse 6s ease-in-out infinite;}
-.hero-orb2{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(232,201,122,0.07) 0%,transparent 70%);bottom:20%;right:15%;pointer-events:none;animation:pulse 8s ease-in-out infinite reverse;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border-s);padding:6px 16px;border-radius:100px;font-family:"Syne Mono",monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--wave-light);margin-bottom:36px;opacity:0;animation:fadeUp 0.8s 0.1s forwards;}
-.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--wave);animation:blink 2s infinite;}
-.hero h1{font-family:"Instrument Serif",serif;font-size:clamp(46px,7vw,86px);font-weight:400;line-height:1.05;color:var(--white);margin-bottom:14px;max-width:800px;opacity:0;animation:fadeUp 0.8s 0.25s forwards;}
-.hero h1 em{font-style:italic;color:var(--wave-light);}
-.hero-sub{font-size:17px;color:var(--muted);max-width:540px;margin:0 auto 48px;line-height:1.75;opacity:0;animation:fadeUp 0.8s 0.4s forwards;}
-.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp 0.8s 0.55s forwards;}
-.btn-primary{background:var(--wave);color:var(--white);padding:14px 30px;border-radius:4px;font-size:14px;font-weight:600;letter-spacing:0.04em;text-decoration:none;transition:all 0.25s;display:inline-block;}
+/* BUTTONS */
+.btn-primary{background:var(--wave);color:var(--white);padding:14px 28px;border-radius:6px;font-size:14px;font-weight:600;letter-spacing:0.04em;text-decoration:none;transition:all 0.25s;display:inline-block;}
 .btn-primary:hover{background:var(--wave-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(120,100,255,0.45);}
-.btn-ghost{background:transparent;color:var(--text);padding:14px 30px;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:0.04em;text-decoration:none;border:1px solid var(--border-s);transition:all 0.25s;display:inline-block;}
+.btn-primary:active{transform:translateY(0) scale(0.98);}
+.btn-ghost{background:transparent;color:var(--text);padding:14px 28px;border-radius:6px;font-size:14px;font-weight:500;letter-spacing:0.04em;text-decoration:none;border:1px solid var(--border-s);transition:all 0.25s;display:inline-block;}
 .btn-ghost:hover{border-color:var(--wave);color:var(--wave-light);}
-.hero-proof{margin-top:64px;display:flex;align-items:center;justify-content:center;gap:28px;opacity:0;animation:fadeUp 0.8s 0.7s forwards;flex-wrap:wrap;}
-.proof-item{display:flex;align-items:center;gap:8px;font-family:"Syne Mono",monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
-.proof-dot{width:4px;height:4px;border-radius:50%;background:var(--wave);flex-shrink:0;}
+.btn-ghost:active{transform:scale(0.98);}
+
+/* HERO (asymmetric split) */
+.hero{min-height:100dvh;display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;max-width:1240px;margin:0 auto;padding:120px 48px 80px;position:relative;}
+.hero-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(120,100,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(120,100,255,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 55% at 50% 8%,black 30%,transparent 100%);pointer-events:none;z-index:0;}
+.hero-copy{position:relative;z-index:1;}
+.hero h1{font-family:"Instrument Serif",serif;font-size:clamp(42px,5.2vw,72px);font-weight:400;line-height:1.06;color:var(--white);margin-bottom:22px;opacity:0;animation:fadeUp 0.8s 0.1s forwards;}
+.hero h1 em{font-style:italic;color:var(--wave-light);}
+.hero-sub{font-size:17px;color:var(--muted);max-width:480px;margin-bottom:40px;line-height:1.75;opacity:0;animation:fadeUp 0.8s 0.25s forwards;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.8s 0.4s forwards;}
+
+/* LIVE DEMO CARD */
+.demo-card{position:relative;z-index:1;border:1px solid var(--border-s);border-radius:14px;overflow:hidden;opacity:0;animation:fadeUp 0.9s 0.45s forwards;box-shadow:0 24px 80px rgba(0,0,0,0.55);}
+.demo-card-bg{position:absolute;inset:0;background-image:url('assets/wavelength-brand.jpg');background-size:cover;background-position:center;opacity:0.5;}
+.demo-card-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,16,0.55) 0%,rgba(8,8,16,0.92) 78%);}
+.demo-card-inner{position:relative;padding:40px 34px 34px;display:flex;flex-direction:column;gap:14px;}
+.demo-live{display:inline-flex;align-items:center;gap:9px;font-family:"Syne Mono",monospace;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);}
+.demo-live-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:blink 2s infinite;}
+.demo-card h3{font-size:21px;font-weight:700;color:var(--white);line-height:1.3;}
+.demo-card p{font-size:14px;color:rgba(238,238,244,0.78);line-height:1.7;}
+.demo-number{font-family:"Instrument Serif",serif;font-size:clamp(30px,3vw,40px);color:var(--white);text-decoration:none;display:block;margin:6px 0 2px;transition:color 0.2s;}
+.demo-number:hover{color:var(--wave-light);}
+.demo-card .btn-primary{text-align:center;margin-top:8px;}
+
+/* MATH BAND */
+.math-band{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(120,100,255,0.06) 0%,rgba(78,205,196,0.03) 100%);}
+.math-inner{max-width:1080px;margin:0 auto;padding:64px 48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.math-inner h2{margin-bottom:0;}
+.math-figures{display:flex;flex-direction:column;gap:20px;}
+.math-fig{display:flex;align-items:baseline;gap:18px;}
+.math-fig .num{font-family:"Instrument Serif",serif;font-style:italic;font-size:clamp(30px,3.4vw,44px);color:var(--gold);line-height:1.1;min-width:150px;}
+.math-fig .lbl{font-size:14px;color:var(--muted);line-height:1.6;}
+.math-src{font-size:13px;color:var(--muted);margin-top:22px;line-height:1.7;}
 
 /* SECTIONS */
 .section{max-width:1080px;margin:0 auto;padding:100px 48px;}
 .sep{border:none;border-top:1px solid var(--border);}
 .stag{font-family:"Syne Mono",monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--wave-light);margin-bottom:40px;display:flex;align-items:center;gap:16px;}
 .stag::before{content:"";width:24px;height:1px;background:var(--wave);}
-h2{font-family:"Instrument Serif",serif;font-size:clamp(30px,4.5vw,52px);font-weight:400;line-height:1.1;color:var(--white);margin-bottom:24px;}
+h2{font-family:"Instrument Serif",serif;font-size:clamp(30px,4.5vw,50px);font-weight:400;line-height:1.12;color:var(--white);margin-bottom:24px;}
 h2 em{font-style:italic;color:var(--wave-light);}
 h2 .ge{font-style:italic;color:var(--gold);}
 .bt{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:16px;max-width:640px;}
 
-/* WHO WE SERVE */
-.serve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin:48px 0;border:1px solid var(--border);}
-.serve-card{background:var(--surface);padding:34px 26px;transition:background 0.3s;position:relative;overflow:hidden;}
-.serve-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--wave),transparent);opacity:0;transition:opacity 0.3s;}
-.serve-card:hover{background:var(--surface2);}
-.serve-card:hover::before{opacity:1;}
-.serve-icon{font-size:22px;margin-bottom:16px;display:block;}
-.serve-card h4{font-size:15px;font-weight:600;color:var(--white);margin-bottom:7px;letter-spacing:0.02em;}
-.serve-card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0;}
+/* BUILD BENTO */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(180px,auto);gap:2px;margin:48px 0 0;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.bcell{background:var(--surface);padding:32px 30px;transition:background 0.25s;position:relative;display:flex;flex-direction:column;justify-content:flex-end;}
+.bcell:hover{background:var(--surface2);}
+.bcell h3{font-size:18px;font-weight:700;color:var(--white);margin-bottom:8px;letter-spacing:0.02em;}
+.bcell p{font-size:13.5px;color:var(--muted);line-height:1.65;}
+.bcell-flag{grid-column:span 2;grid-row:span 2;justify-content:flex-end;min-height:420px;}
+.bcell-flag-bg{position:absolute;inset:0;background-image:url('assets/wavelength-brand.jpg');background-size:cover;background-position:center;opacity:0.7;transition:opacity 0.4s, transform 0.6s;}
+.bcell-flag:hover .bcell-flag-bg{opacity:0.78;transform:scale(1.02);}
+.bcell-flag-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,16,0.1) 0%,rgba(8,8,16,0.9) 74%);}
+.bcell-flag > :not(.bcell-flag-bg):not(.bcell-flag-scrim){position:relative;z-index:1;}
+.bcell-flag h3{font-size:26px;}
+.bcell-flag p{font-size:15px;max-width:520px;color:rgba(238,238,244,0.8);}
+.bcell-flag .flag-call{margin-top:18px;display:inline-block;font-size:14px;font-weight:600;color:var(--white);text-decoration:none;border:1px solid var(--border-s);border-radius:6px;padding:11px 20px;transition:all 0.25s;align-self:flex-start;background:rgba(8,8,16,0.5);}
+.bcell-flag .flag-call:hover{border-color:var(--wave);color:var(--wave-light);}
+.bcell-tint{background:linear-gradient(160deg,rgba(120,100,255,0.14) 0%,var(--surface) 65%);}
+.bcell-gold{background:linear-gradient(160deg,rgba(232,201,122,0.09) 0%,var(--surface) 65%);}
 
-/* BUILD */
-.build-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:48px 0;background:var(--border);border:1px solid var(--border);}
-.build-card{background:var(--surface);padding:38px 34px;transition:background 0.25s;}
-.build-card:hover{background:var(--surface2);}
-.build-num{font-family:"Syne Mono",monospace;font-size:11px;letter-spacing:0.2em;color:var(--wave);margin-bottom:14px;display:block;}
-.build-card h3{font-size:19px;font-weight:600;color:var(--white);margin-bottom:9px;letter-spacing:0.02em;}
-.build-card p{font-size:14px;color:var(--muted);line-height:1.7;margin:0;}
+/* SERVE LIST */
+.serve-list{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin-top:48px;}
+.serve-row{border-top:1px solid var(--border);padding:26px 4px 28px;}
+.serve-row h4{font-size:16px;font-weight:700;color:var(--white);margin-bottom:7px;letter-spacing:0.02em;}
+.serve-row p{font-size:13.5px;color:var(--muted);line-height:1.65;}
+
+/* HOW IT WORKS */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px;position:relative;}
+.flow::before{content:"";position:absolute;top:30px;left:8%;right:8%;height:1px;background:linear-gradient(to right,var(--wave),var(--gold));opacity:0.35;}
+.fstep{position:relative;}
+.fstep .fnum{font-family:"Instrument Serif",serif;font-style:italic;font-size:48px;color:var(--wave-light);line-height:1;display:block;margin-bottom:18px;background:var(--bg);width:64px;position:relative;}
+.fstep h3{font-size:18px;font-weight:700;color:var(--white);margin-bottom:9px;}
+.fstep p{font-size:14px;color:var(--muted);line-height:1.7;}
+
+/* FOUNDER */
+.founder-panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:56px;display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:center;margin-top:8px;}
+.founder-photo{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;border:1px solid var(--border-s);}
+.founder-photo-bg{position:absolute;inset:0;background-image:url('assets/wavelength-brand.jpg');background-size:cover;background-position:center;opacity:0.55;}
+.founder-photo-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,16,0.3) 0%,rgba(8,8,16,0.88) 80%);}
+.founder-mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Instrument Serif",serif;font-style:italic;font-size:96px;color:var(--white);text-shadow:0 4px 40px rgba(120,100,255,0.5);}
+.founder-cap{position:absolute;bottom:0;left:0;right:0;padding:18px 20px;}
+.founder-cap .fc-name{font-size:15px;font-weight:700;color:var(--white);display:block;}
+.founder-cap .fc-role{font-size:12px;color:var(--muted);font-family:"Syne Mono",monospace;letter-spacing:0.08em;}
+.founder-body h2{margin-bottom:18px;}
+.founder-body p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:16px;max-width:560px;}
+.founder-body p strong{color:var(--text);font-weight:600;}
+.founder-link{display:inline-block;margin-top:8px;font-size:14px;font-weight:600;color:var(--wave-light);text-decoration:none;border-bottom:1px solid var(--border-s);padding-bottom:2px;transition:all 0.2s;}
+.founder-link:hover{color:var(--white);border-color:var(--wave);}
 
 /* PRICING */
-.pricing-intro{background:var(--surface);border:1px solid var(--border);padding:30px 34px;margin:44px 0 28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;}
+.pricing-intro{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px 32px;margin:44px 0 28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;}
 .pricing-intro p{font-size:15px;color:var(--muted);line-height:1.7;margin:0;max-width:none;}
-.legend{display:flex;flex-direction:column;gap:8px;flex-shrink:0;}
-.leg-item{display:flex;align-items:center;gap:9px;font-family:"Syne Mono",monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
-.leg-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
-.ld-i{background:var(--wave)}.ld-m{background:var(--gold)}.ld-r{background:var(--teal)}
+.legend{display:flex;flex-direction:column;gap:7px;flex-shrink:0;}
+.leg-item{font-family:"Syne Mono",monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;white-space:nowrap;}
+.leg-i{color:var(--wave-light)}.leg-m{color:var(--gold)}.leg-r{color:var(--teal)}
 
-/* TIERS */
 .tiers{display:flex;flex-direction:column;gap:2px;}
-.tier{border:1px solid var(--border);overflow:hidden;transition:border-color 0.3s;background:var(--surface);}
+.tier{border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color 0.3s;background:var(--surface);position:relative;}
 .tier:hover{border-color:var(--border-s);}
 .tier.active{border-color:var(--wave);background:var(--surface2);}
 .tier-hd{display:flex;align-items:stretch;cursor:pointer;user-select:none;position:relative;}
 .tier-hd:hover{background:rgba(120,100,255,0.03);}
 .tier.active .tier-hd{background:rgba(120,100,255,0.06);}
-.tnum{font-family:"Instrument Serif",serif;font-size:46px;font-style:italic;color:var(--wave-light);padding:20px 26px;border-right:1px solid var(--border);display:flex;align-items:center;flex-shrink:0;line-height:1;transition:color 0.3s;}
+.tnum{font-family:"Instrument Serif",serif;font-size:46px;font-style:italic;color:var(--wave-light);padding:20px 26px;border-right:1px solid var(--border);display:flex;align-items:center;flex-shrink:0;line-height:1.15;transition:color 0.3s;}
 .tier.active .tnum{color:var(--white);}
 .tinfo{padding:18px 22px;flex:1;display:flex;flex-direction:column;justify-content:center;}
 .tinfo h3{font-size:17px;font-weight:700;color:var(--white);margin-bottom:4px;letter-spacing:0.02em;}
-.tinfo .tl{font-size:13px;color:var(--muted);font-family:"Instrument Serif",serif;font-style:italic;}
+.tinfo .tl{font-size:13px;color:var(--muted);font-family:"Instrument Serif",serif;font-style:italic;line-height:1.4;}
 .tsum{padding:18px 22px;border-left:1px solid var(--border);flex-shrink:0;min-width:230px;display:flex;flex-direction:column;justify-content:center;gap:5px;}
 .ts-i{font-size:12px;color:var(--wave-light);font-family:"Syne Mono",monospace;letter-spacing:0.04em;}
 .ts-m{font-size:12px;color:var(--gold-dim);font-family:"Syne Mono",monospace;letter-spacing:0.04em;}
@@ -122,43 +174,54 @@ h2 .ge{font-style:italic;color:var(--gold);}
 .tier.active .tier-body{grid-template-rows:1fr;}
 .tbi{overflow:hidden;}
 .tbc{padding:0 28px 32px;border-top:1px solid var(--border);}
-.fee-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(120,100,255,0.18);margin:24px 0 18px;}
+.fee-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(120,100,255,0.18);margin:24px 0 18px;border-radius:8px;overflow:hidden;}
 .fbox{background:var(--bg);padding:20px 18px;text-align:center;}
 .fbox.na{opacity:0.4;}
 .flbl{font-family:"Syne Mono",monospace;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:9px;display:block;}
 .fl-i{color:var(--wave-light)}.fl-m{color:var(--gold)}.fl-r{color:var(--teal)}
-.famt{font-family:"Instrument Serif",serif;font-size:24px;font-style:italic;color:var(--white);display:block;line-height:1;margin-bottom:6px;}
+.famt{font-family:"Instrument Serif",serif;font-size:24px;font-style:italic;color:var(--white);display:block;line-height:1.15;margin-bottom:6px;padding-bottom:2px;}
 .fnote{font-size:11px;color:var(--muted);display:block;line-height:1.5;}
 .fna{font-family:"Syne Mono",monospace;font-size:10px;letter-spacing:0.1em;color:var(--muted);display:block;margin:6px 0;}
 .inc-lbl{font-family:"Syne Mono",monospace;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);display:block;padding:16px 0 10px;border-top:1px solid var(--border);margin-top:16px;}
 .feat{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;margin-bottom:18px;}
 .feat li{font-size:13px;color:rgba(238,238,244,0.7);padding-left:18px;position:relative;line-height:1.5;}
-.feat li::before{content:"→";position:absolute;left:0;color:var(--wave);font-size:11px;}
-.tbadge{position:absolute;top:0;right:0;background:var(--wave);color:var(--white);font-family:"Syne Mono",monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;padding:5px 14px;}
-.roi{border-left:2px solid var(--wave);padding:15px 18px;background:var(--wave-glow);margin-top:16px;}
+.feat li::before{content:"+";position:absolute;left:0;color:var(--wave);font-size:12px;}
+.tbadge{position:absolute;top:0;right:0;background:var(--wave);color:var(--white);font-family:"Syne Mono",monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;padding:5px 14px;border-radius:0 0 0 8px;z-index:2;}
+.roi{border-left:2px solid var(--wave);padding:15px 18px;background:var(--wave-glow);margin-top:16px;border-radius:0 8px 8px 0;}
 .roi .rl{font-family:"Syne Mono",monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--wave-light);margin-bottom:6px;display:block;}
 .roi p{font-size:13px;color:rgba(238,238,244,0.75);margin:0;line-height:1.6;max-width:none;}
 
+/* GUARANTEE */
+.guarantee{margin-top:56px;border:1px solid rgba(232,201,122,0.3);border-radius:12px;background:linear-gradient(135deg,rgba(232,201,122,0.05) 0%,var(--surface) 60%);padding:36px 40px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;}
+.guarantee .gnum{font-family:"Instrument Serif",serif;font-style:italic;font-size:56px;color:var(--gold);line-height:1.1;padding-bottom:4px;}
+.guarantee h3{font-size:18px;font-weight:700;color:var(--white);margin-bottom:6px;}
+.guarantee p{font-size:14px;color:var(--muted);line-height:1.7;max-width:680px;}
+
 /* TABLE */
-.tbl{width:100%;border-collapse:collapse;margin:32px 0;font-size:14px;}
+.tbl{width:100%;border-collapse:collapse;margin:32px 0 0;font-size:14px;}
 .tbl thead tr{border-bottom:1px solid var(--border-s);}
 .tbl th{font-family:"Syne Mono",monospace;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--wave-light);padding:13px 16px;text-align:left;}
 .tbl td{padding:13px 16px;border-bottom:1px solid var(--border);color:var(--muted);}
 .tbl tr:hover td{background:var(--surface);}
 .hi{color:var(--gold);font-weight:500;}
-.tbl .tr-tot td{color:var(--white);font-weight:500;border-top:1px solid var(--border-s);background:var(--surface2);}
+.tbl .tr-tot td{color:var(--white);font-weight:500;background:var(--surface2);}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px 56px;margin-top:52px;}
+.faq-item h4{font-size:16px;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.4;}
+.faq-item p{font-size:14px;color:var(--muted);line-height:1.75;}
 
 /* CONTACT */
-.contact-block{background:var(--surface);border:1px solid var(--border);padding:64px 48px;position:relative;overflow:hidden;text-align:center;}
+.contact-block{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:64px 48px;position:relative;overflow:hidden;text-align:center;}
 .contact-block::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--wave),var(--gold),transparent);}
 .contact-orb{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(120,100,255,0.07) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
 .contact-block h2{color:var(--white);margin-bottom:14px;position:relative;z-index:1;}
-.contact-block .sub{font-size:16px;color:var(--muted);max-width:500px;margin:0 auto 40px;position:relative;z-index:1;line-height:1.7;}
-.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:700px;margin:0 auto 36px;background:var(--border);border:1px solid var(--border);position:relative;z-index:1;}
-.cc{background:var(--surface2);padding:26px 20px;text-align:center;transition:background 0.2s;}
+.contact-block .sub{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 40px;position:relative;z-index:1;line-height:1.7;}
+.contact-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;max-width:860px;margin:0 auto 36px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;position:relative;z-index:1;}
+.cc{background:var(--surface2);padding:24px 16px;text-align:center;transition:background 0.2s;}
 .cc:hover{background:var(--bg);}
 .cc-lbl{font-family:"Syne Mono",monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--wave-light);margin-bottom:8px;display:block;}
-.cc-val{font-size:14px;font-weight:600;color:var(--white);display:block;}
+.cc-val{font-size:13.5px;font-weight:600;color:var(--white);display:block;word-break:break-word;}
 .cc-val a{color:var(--white);text-decoration:none;transition:color 0.2s;}
 .cc-val a:hover{color:var(--wave-light);}
 .cta-group{display:flex;gap:12px;justify-content:center;position:relative;z-index:1;flex-wrap:wrap;}
@@ -166,57 +229,57 @@ h2 .ge{font-style:italic;color:var(--gold);}
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .foot-brand{font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--wave-light);}
-.foot-links{display:flex;gap:24px;list-style:none;}
+.foot-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap;}
 .foot-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color 0.2s;}
 .foot-links a:hover{color:var(--text);}
 .foot-copy{font-family:"Syne Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:0.08em;}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,100%{transform:translate(-50%,-55%) scale(1)}50%{transform:translate(-50%,-55%) scale(1.06)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
 
-/* DEMO STRIP */
-.demo-strip{background:linear-gradient(135deg,rgba(120,100,255,0.07) 0%,rgba(78,205,196,0.04) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.demo-strip-inner{max-width:1080px;margin:0 auto;padding:28px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-.demo-left{display:flex;align-items:center;gap:18px;}
-.demo-icon{font-size:28px;flex-shrink:0;line-height:1;}
-.demo-title{font-size:16px;font-weight:600;color:var(--white);margin-bottom:4px;letter-spacing:0.01em;}
-.demo-sub{font-size:13px;color:var(--muted);line-height:1.55;max-width:480px;}
-.demo-cta{white-space:nowrap;flex-shrink:0;}
+/* SCROLL REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease, transform 0.6s ease;}
+.rv.in{opacity:1;transform:translateY(0);}
 
-/* LEAD CAPTURE CARD */
-.wl-lead-card{background:rgba(120,100,255,0.07);border:1px solid rgba(120,100,255,0.28);border-radius:12px;padding:16px;margin:4px 0;align-self:stretch;}
-.wl-lead-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:3px;}
-.wl-lead-sub{font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.5;}
-.wl-lead-fields{display:flex;flex-direction:column;gap:8px;margin-bottom:10px;}
-.wl-lead-inp{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 12px;color:var(--text);font-family:'Syne',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s;}
-.wl-lead-inp:focus{border-color:var(--wave);}
-.wl-lead-inp.err{border-color:rgba(255,80,80,0.55);}
-.wl-lead-actions{display:flex;gap:8px;align-items:center;}
-.wl-lead-submit{background:var(--wave);color:white;border:none;padding:8px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Syne',sans-serif;transition:background 0.2s;letter-spacing:0.04em;}
-.wl-lead-submit:hover{background:var(--wave-light);}
-.wl-lead-skip{background:none;border:none;color:var(--muted);padding:4px 8px;font-size:12px;cursor:pointer;font-family:'Syne',sans-serif;transition:color 0.2s;text-decoration:underline;text-underline-offset:2px;}
-.wl-lead-skip:hover{color:var(--text);}
-.wl-lead-success{font-size:13px;color:var(--text);line-height:1.6;}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;}
+  .hero h1,.hero-sub,.hero-actions,.demo-card{opacity:1!important;animation:none!important;}
+  .rv{opacity:1;transform:none;}
+  html{scroll-behavior:auto;}
+}
 
+@media(max-width:980px){
+  .hero{grid-template-columns:1fr;gap:40px;padding-top:110px;}
+  .math-inner{grid-template-columns:1fr;gap:32px;}
+  .bento{grid-template-columns:1fr 1fr;}
+  .bcell-flag{grid-column:span 2;grid-row:span 1;min-height:340px;}
+  .founder-panel{grid-template-columns:1fr;padding:36px;gap:36px;}
+  .founder-photo{max-width:300px;}
+}
 @media(max-width:768px){
-  nav{padding:14px 24px;}
+  nav{padding:0 24px;}
   .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,16,0.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:28px;z-index:100;}
   .nav-links.open{display:flex;}
   .nav-links a{font-size:18px;color:var(--text);}
   .ham{display:block;}
-  .hero{padding:120px 24px 70px;}
+  .hero{padding:100px 24px 60px;}
   .section{padding:70px 24px;}
-  .serve-grid,.build-grid,.fee-row,.feat,.contact-cards{grid-template-columns:1fr;}
+  .math-inner{padding:48px 24px;}
+  .bento{grid-template-columns:1fr;}
+  .bcell-flag{grid-column:span 1;}
+  .serve-list,.flow,.faq-grid,.fee-row,.feat{grid-template-columns:1fr;}
+  .flow::before{display:none;}
+  .contact-cards{grid-template-columns:1fr 1fr;}
   .tsum{display:none;}
   .pricing-intro{grid-template-columns:1fr;}
+  .guarantee{grid-template-columns:1fr;gap:12px;}
   footer{flex-direction:column;padding:28px 24px;}
-  .demo-strip-inner{padding:20px 24px;}
-  .demo-cta{width:100%;text-align:center;}
 }
 </style>
 </head>
 <body>
+
+<div class="hero-grid"></div>
 
 <!-- NAV -->
 <nav>
@@ -227,75 +290,147 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="tel:+12362050807" class="nav-phone">+1 (236) 205-0807</a></li>
-    <li><a href="mailto:danciampelletti@wavelengthsolutions.co" class="nav-cta">Get Started</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="tel:+13607451628" class="nav-cta">Call the AI</a></li>
   </ul>
-  <button class="ham"><span></span><span></span><span></span></button>
+  <button class="ham" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-orb"></div>
-  <div class="hero-orb2"></div>
-  <div class="hero-badge"><div class="badge-dot"></div>Based in Fort Langley, BC &mdash; Serving Canada</div>
-  <h1>Your Business Should<br>Never Miss a <em>Client</em> Again</h1>
-  <p class="hero-sub">Wavelength builds AI receptionists, membership funnels, and reactivation systems for high-end service businesses &mdash; so you capture every inquiry, convert more clients, and grow without adding staff.</p>
-  <div class="hero-actions">
-    <a href="https://cal.com/daniel-ciampelletti-r2i2t4" class="btn-primary">Book a Free Audit</a>
-    <a href="tel:+12362050807" class="btn-ghost">Call +1 (236) 205-0807</a>
+  <div class="hero-copy">
+    <h1>Never lose another client to a <em>missed call.</em></h1>
+    <p class="hero-sub">Wavelength builds AI receptionists and growth systems for service businesses. They answer, book, and follow up around the clock.</p>
+    <div class="hero-actions">
+      <a href="tel:+13607451628" class="btn-primary">Call the AI: (360) 745-1628</a>
+      <a href="https://cal.com/daniel-ciampelletti-r2i2t4" class="btn-ghost">Book a Free Audit</a>
+    </div>
   </div>
-  <div class="hero-proof">
-    <div class="proof-item"><div class="proof-dot"></div>Med Spas</div>
-    <div class="proof-item"><div class="proof-dot"></div>Aesthetic Clinics</div>
-    <div class="proof-item"><div class="proof-dot"></div>High-End Service Businesses</div>
-    <div class="proof-item"><div class="proof-dot"></div>Multi-Location Franchises</div>
+  <div class="demo-card">
+    <div class="demo-card-bg"></div>
+    <div class="demo-card-scrim"></div>
+    <div class="demo-card-inner">
+      <span class="demo-live"><span class="demo-live-dot"></span>Live AI line</span>
+      <h3>This is the actual product. Talk to it right now.</h3>
+      <p>Our AI receptionist answers this line 24/7. Call it, ask it questions, try to book an appointment. Then imagine it branded to your business, booked into your calendar.</p>
+      <a href="tel:+13607451628" class="demo-number">+1 (360) 745-1628</a>
+    </div>
   </div>
 </section>
 
-<!-- DEMO STRIP -->
-<div class="demo-strip">
-  <div class="demo-strip-inner">
-    <div class="demo-left">
-      <span class="demo-icon">📞</span>
-      <div>
-        <div class="demo-title">Hear it yourself — call our AI demo right now</div>
-        <div class="demo-sub">This is the actual product we build for our clients. Call the number, have a real conversation, try to book an appointment. It's fully autonomous.</div>
-      </div>
+<!-- MATH BAND -->
+<div class="math-band">
+  <div class="math-inner">
+    <div class="rv">
+      <h2>The math on a <span class="ge">missed call.</span></h2>
+      <p class="math-src">From a real conversation with a Fraser Valley plumber. His phone rang, nobody answered, and the lead called the next company on Google. That pattern repeats in every service business we talk to.</p>
     </div>
-    <a href="tel:+13607451628" class="btn-primary demo-cta">Call Demo &nbsp;&bull;&nbsp; +1 (360) 745-1628</a>
+    <div class="math-figures rv">
+      <div class="math-fig"><span class="num">3-4 calls</span><span class="lbl">missed every week while he was on a job site</span></div>
+      <div class="math-fig"><span class="num">$300+</span><span class="lbl">average value of every job that called someone else</span></div>
+      <div class="math-fig"><span class="num">~$50K</span><span class="lbl">walking out the door every year, before he changed anything</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE BUILD -->
+<div class="section" id="services">
+  <h2 class="rv">Systems that <em>pay for themselves.</em></h2>
+  <p class="bt rv">One flagship product, five supporting systems. Every build is custom to your business, integrated with the tools you already use, and maintained month to month.</p>
+  <div class="bento rv">
+    <div class="bcell bcell-flag">
+      <div class="bcell-flag-bg"></div>
+      <div class="bcell-flag-scrim"></div>
+      <h3>AI Receptionist</h3>
+      <p>A branded AI agent that answers your calls and messages 24/7, handles FAQs, and books appointments directly into your scheduling system. After hours, weekends, mid-treatment. Every inquiry captured, every time.</p>
+      <a href="tel:+13607451628" class="flag-call">Call the AI: (360) 745-1628</a>
+    </div>
+    <div class="bcell bcell-tint">
+      <h3>Smart Funnels</h3>
+      <p>Automated sequences that move inquiries to consultations, consultations to paying clients, and clients to long-term relationships.</p>
+    </div>
+    <div class="bcell">
+      <h3>Follow-Up Engine</h3>
+      <p>Reactivation timed to your business cycles. The right message, to the right person, at the right time. Automatically.</p>
+    </div>
+    <div class="bcell">
+      <h3>Growth Automation</h3>
+      <p>Automated review generation, referral programs, and seasonal campaigns running in the background at zero ad spend.</p>
+    </div>
+    <div class="bcell bcell-gold">
+      <h3>Managed Ads</h3>
+      <p>Meta and Google campaigns built, run, and reported by us, feeding leads straight into your AI receptionist. Scoped per engagement.</p>
+    </div>
+    <div class="bcell">
+      <h3>Websites That Convert</h3>
+      <p>Fast, premium sites built to turn visitors into booked appointments, with your AI agent answering chat right on the page.</p>
+    </div>
   </div>
 </div>
 
 <hr class="sep">
 
 <!-- WHO WE SERVE -->
-<div class="section" id="services">
-  <p class="stag">Who We Serve</p>
-  <h2>Built for Businesses Where <em>Every Client Matters</em></h2>
-  <p class="bt">We specialize in high-ticket service businesses where a single missed inquiry isn't just annoying &mdash; it's hundreds or thousands of dollars walking out the door.</p>
-  <div class="serve-grid">
-    <div class="serve-card"><span class="serve-icon">💉</span><h4>Med Spas &amp; Aesthetic Clinics</h4><p>Botox, fillers, laser, Morpheus8. High-consideration clients who research at night and book with whoever responds first.</p></div>
-    <div class="serve-card"><span class="serve-icon">🏥</span><h4>Wellness &amp; Health Clinics</h4><p>Physiotherapy, chiropractic, naturopathic. Appointment-driven businesses with recurring client relationships worth protecting.</p></div>
-    <div class="serve-card"><span class="serve-icon">✂️</span><h4>Premium Salons &amp; Spas</h4><p>High-end salons where clients book specific stylists by name. After-hours inquiries are lost revenue &mdash; we fix that.</p></div>
-    <div class="serve-card"><span class="serve-icon">🏢</span><h4>Multi-Location Franchises</h4><p>One system, every location. Automated cross-location routing, unified reporting, and franchise-wide membership funnels.</p></div>
-    <div class="serve-card"><span class="serve-icon">🔧</span><h4>Home Services</h4><p>HVAC, plumbing, electrical. Emergency calls at 2am, weekend inquiries, quote follow-ups &mdash; all automated.</p></div>
-    <div class="serve-card"><span class="serve-icon">🏘️</span><h4>Real Estate &amp; Property</h4><p>Property managers, agents, strata companies. Tenant inquiries, viewing bookings, maintenance requests on autopilot.</p></div>
+<div class="section">
+  <h2 class="rv">Built for businesses where <em>every client matters.</em></h2>
+  <p class="bt rv">High-ticket service businesses where a single missed inquiry is hundreds or thousands of dollars walking out the door.</p>
+  <div class="serve-list rv">
+    <div class="serve-row"><h4>Med Spas &amp; Aesthetic Clinics</h4><p>Botox, fillers, laser. High-consideration clients who research at night and book with whoever responds first.</p></div>
+    <div class="serve-row"><h4>Wellness &amp; Health Clinics</h4><p>Physio, chiro, naturopathic. Appointment-driven businesses with recurring relationships worth protecting.</p></div>
+    <div class="serve-row"><h4>Premium Salons &amp; Spas</h4><p>Clients book specific stylists by name. After-hours inquiries are lost revenue. We fix that.</p></div>
+    <div class="serve-row"><h4>Home Services</h4><p>HVAC, plumbing, electrical, detailing. Emergency calls at 2am, weekend inquiries, quote follow-ups. All automated.</p></div>
+    <div class="serve-row"><h4>Real Estate &amp; Property</h4><p>Tenant inquiries, viewing bookings, and maintenance requests handled on autopilot.</p></div>
+    <div class="serve-row"><h4>Multi-Location Franchises</h4><p>One system, every location. Cross-location routing, unified reporting, franchise-wide funnels.</p></div>
   </div>
 </div>
 
 <hr class="sep">
 
-<!-- WHAT WE BUILD -->
+<!-- HOW IT WORKS -->
 <div class="section">
-  <p class="stag">What We Build</p>
-  <h2>Four Systems That <em>Pay for Themselves</em></h2>
-  <div class="build-grid">
-    <div class="build-card"><span class="build-num">01 &mdash; AI RECEPTIONIST</span><h3>24/7 Voice &amp; Chat Coverage</h3><p>A branded AI agent that answers calls, responds to messages, and books appointments directly into your scheduling system &mdash; around the clock. Every inquiry captured, every time.</p></div>
-    <div class="build-card"><span class="build-num">02 &mdash; SMART FUNNELS</span><h3>Convert &amp; Retain at Scale</h3><p>Automated sequences that move inquiries to consultations, consultations to paying clients, and clients to long-term relationships. Custom-built around your business &mdash; not templates.</p></div>
-    <div class="build-card"><span class="build-num">03 &mdash; FOLLOW-UP ENGINE</span><h3>Win Back Lapsed Clients</h3><p>Intelligent follow-up timed to your business cycles. The right message, to the right person, at the right time &mdash; automatically. No more revenue walking out the door.</p></div>
-    <div class="build-card"><span class="build-num">04 &mdash; GROWTH AUTOMATION</span><h3>Reviews, Referrals &amp; Campaigns</h3><p>Automated review generation, referral programs, and seasonal campaigns. All running in the background while you focus on what you do best &mdash; serving your clients.</p></div>
+  <h2 class="rv">From first call to live system in <span class="ge">7-14 days.</span></h2>
+  <div class="flow rv">
+    <div class="fstep">
+      <span class="fnum">1</span>
+      <h3>Audit</h3>
+      <p>A free 15-minute call. We find where your business is leaking revenue: missed calls, slow follow-up, lapsed clients. No pitch deck, no pressure.</p>
+    </div>
+    <div class="fstep">
+      <span class="fnum">2</span>
+      <h3>Build</h3>
+      <p>We custom-build your system, train it on your business, brand the voice, and wire it into your existing scheduling and CRM. You approve everything before launch.</p>
+    </div>
+    <div class="fstep">
+      <span class="fnum">3</span>
+      <h3>Launch</h3>
+      <p>Your AI goes live and starts capturing inquiries day one. We monitor, optimize, and report monthly. Month to month, no locked contracts.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- FOUNDER -->
+<div class="section" id="founder">
+  <p class="stag">The Founder</p>
+  <div class="founder-panel rv">
+    <div class="founder-photo">
+      <div class="founder-photo-bg"></div>
+      <div class="founder-photo-scrim"></div>
+      <div class="founder-mono">DC</div>
+      <div class="founder-cap">
+        <span class="fc-name">Daniel Ciampelletti</span>
+        <span class="fc-role">Founder, Wavelength Solutions</span>
+      </div>
+    </div>
+    <div class="founder-body">
+      <h2>The guy who <em>builds the machine.</em></h2>
+      <p>Most AI agencies resell no-code tools. Danny builds the actual infrastructure: <strong>custom voice agents, orchestration layers, and memory systems</strong>, written from scratch in his command centre in Langley, BC.</p>
+      <p>Before selling a single system, he built one for himself: a full AI operating system that answers his phone, runs his research, and works while he sleeps. What Wavelength deploys for clients is that same engineering, pointed at your missed calls.</p>
+      <p>Every client system is purpose-built on enterprise AI infrastructure, integrated into your existing stack, and maintained by the person who wrote it.</p>
+      <a href="https://www.linkedin.com/in/daniel-ciampelletti-4b119239b/" target="_blank" rel="noopener" class="founder-link">Connect on LinkedIn</a>
+    </div>
   </div>
 </div>
 
@@ -304,36 +439,36 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
 <!-- PRICING -->
 <div class="section" id="pricing">
   <p class="stag">Pricing</p>
-  <h2>Transparent Pricing. <span class="ge">No Surprises.</span></h2>
-  <p class="bt">Every engagement has three components shown upfront &mdash; an install fee to build the system, a monthly fee to run it, and a retainer for ongoing strategy on higher tiers.</p>
+  <h2 class="rv">Transparent pricing. <span class="ge">No surprises.</span></h2>
+  <p class="bt rv">Every engagement has three components shown upfront: an install fee to build the system, a monthly fee to run it, and a retainer for ongoing strategy on higher tiers.</p>
 
-  <div class="pricing-intro">
+  <div class="pricing-intro rv">
     <p>We don&rsquo;t do generic SaaS subscriptions. Every system is custom-built for your business. The install fee covers the build. The monthly fee keeps it running and optimized. The retainer covers active strategy and dedicated support.</p>
     <div class="legend">
-      <div class="leg-item"><div class="leg-dot ld-i"></div>Install Fee</div>
-      <div class="leg-item"><div class="leg-dot ld-m"></div>Monthly Fee</div>
-      <div class="leg-item"><div class="leg-dot ld-r"></div>Retainer</div>
+      <div class="leg-item leg-i">Install Fee</div>
+      <div class="leg-item leg-m">Monthly Fee</div>
+      <div class="leg-item leg-r">Retainer</div>
     </div>
   </div>
 
-  <div class="tiers">
+  <div class="tiers rv">
 
     <div class="tier active" id="p1">
       <div class="tier-hd" onclick="tog('p1')">
         <span class="tnum">1</span>
-        <div class="tinfo"><h3>Always-On Receptionist</h3><span class="tl">24/7 voice &amp; DM coverage &mdash; never miss an inquiry</span></div>
-        <div class="tsum"><span class="ts-i">Install: $1,500&ndash;$2,500</span><span class="ts-m">Monthly: $600&ndash;$800</span><span class="ts-r" style="opacity:0.3">Retainer: N/A</span></div>
+        <div class="tinfo"><h3>Always-On Receptionist</h3><span class="tl">24/7 voice &amp; DM coverage. Never miss an inquiry.</span></div>
+        <div class="tsum"><span class="ts-i">Install: $1,500-$2,500</span><span class="ts-m">Monthly: $600-$800</span><span class="ts-r" style="opacity:0.3">Retainer: N/A</span></div>
         <div class="tchev"><div class="chev"><svg viewBox="0 0 12 8"><polyline points="1,1 6,7 11,1"/></svg></div></div>
       </div>
       <div class="tier-body"><div class="tbi"><div class="tbc">
         <div class="fee-row">
-          <div class="fbox"><span class="flbl fl-i">Install Fee</span><span class="famt">$1,500&ndash;$2,500</span><span class="fnote">One-time. AI build, scheduling integration, knowledge base training &amp; launch</span></div>
-          <div class="fbox"><span class="flbl fl-m">Monthly Fee</span><span class="famt">$600&ndash;$800</span><span class="fnote">Ongoing. Monitoring, maintenance, updates &amp; technical support</span></div>
-          <div class="fbox na"><span class="flbl fl-r">Retainer</span><span class="fna">&mdash; Not applicable &mdash;</span><span class="fnote">Strategy support included in monthly at this tier</span></div>
+          <div class="fbox"><span class="flbl fl-i">Install Fee</span><span class="famt">$1,500-$2,500</span><span class="fnote">One-time. AI build, scheduling integration, knowledge base training &amp; launch</span></div>
+          <div class="fbox"><span class="flbl fl-m">Monthly Fee</span><span class="famt">$600-$800</span><span class="fnote">Ongoing. Monitoring, maintenance, updates &amp; technical support</span></div>
+          <div class="fbox na"><span class="flbl fl-r">Retainer</span><span class="fna">Not applicable</span><span class="fnote">Strategy support included in monthly at this tier</span></div>
         </div>
         <span class="inc-lbl">What's included</span>
         <ul class="feat">
-          <li>AI voice agent handles calls 24/7 &mdash; after hours, weekends, during treatments</li>
+          <li>AI voice agent handles calls 24/7: after hours, weekends, during treatments</li>
           <li>Answers FAQs, treatment info, pricing &amp; directions</li>
           <li>Books appointments into your existing scheduling system</li>
           <li>Instagram &amp; website DM auto-response</li>
@@ -348,14 +483,14 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
       <span class="tbadge">Most Popular</span>
       <div class="tier-hd" onclick="tog('p2')">
         <span class="tnum">2</span>
-        <div class="tinfo"><h3>Nurture &amp; Membership Engine</h3><span class="tl">Convert inquiries into loyal clients &mdash; automatically</span></div>
-        <div class="tsum"><span class="ts-i">Install: $2,500&ndash;$4,000</span><span class="ts-m">Monthly: $1,200&ndash;$1,500</span><span class="ts-r">Retainer: $300/mo</span></div>
+        <div class="tinfo"><h3>Nurture &amp; Membership Engine</h3><span class="tl">Convert inquiries into loyal clients, automatically.</span></div>
+        <div class="tsum"><span class="ts-i">Install: $2,500-$4,000</span><span class="ts-m">Monthly: $1,200-$1,500</span><span class="ts-r">Retainer: $300/mo</span></div>
         <div class="tchev"><div class="chev"><svg viewBox="0 0 12 8"><polyline points="1,1 6,7 11,1"/></svg></div></div>
       </div>
       <div class="tier-body"><div class="tbi"><div class="tbc">
         <div class="fee-row">
-          <div class="fbox"><span class="flbl fl-i">Install Fee</span><span class="famt">$2,500&ndash;$4,000</span><span class="fnote">One-time. Full automation build &mdash; all sequences, integrations &amp; QA testing</span></div>
-          <div class="fbox"><span class="flbl fl-m">Monthly Fee</span><span class="famt">$1,200&ndash;$1,500</span><span class="fnote">Ongoing. System management, optimization &amp; monthly performance reporting</span></div>
+          <div class="fbox"><span class="flbl fl-i">Install Fee</span><span class="famt">$2,500-$4,000</span><span class="fnote">One-time. Full automation build: all sequences, integrations &amp; QA testing</span></div>
+          <div class="fbox"><span class="flbl fl-m">Monthly Fee</span><span class="famt">$1,200-$1,500</span><span class="fnote">Ongoing. System management, optimization &amp; monthly performance reporting</span></div>
           <div class="fbox"><span class="flbl fl-r">Retainer</span><span class="famt">$300/mo</span><span class="fnote">Monthly strategy review, campaign adjustments &amp; priority support</span></div>
         </div>
         <span class="inc-lbl">What's included</span>
@@ -369,21 +504,21 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
           <li>New client welcome sequence pre-consultation</li>
           <li>Monthly performance dashboard</li>
         </ul>
-        <div class="roi"><span class="rl">ROI Snapshot</span><p>Converting 3 additional clients/month to a $169/mo membership = $507 new MRR &mdash; covering this tier entirely. Lapsed client reactivation recovers 8&ndash;15% of dormant clients within 90 days.</p></div>
+        <div class="roi"><span class="rl">ROI Snapshot</span><p>Converting 3 additional clients/month to a $169/mo membership = $507 new MRR, covering this tier entirely. Lapsed client reactivation recovers 8-15% of dormant clients within 90 days.</p></div>
       </div></div></div>
     </div>
 
     <div class="tier" id="p3">
       <div class="tier-hd" onclick="tog('p3')">
         <span class="tnum">3</span>
-        <div class="tinfo"><h3>Full AI Growth Stack</h3><span class="tl">Complete automation infrastructure for a scaling business</span></div>
-        <div class="tsum"><span class="ts-i">Install: $4,000&ndash;$6,500</span><span class="ts-m">Monthly: $2,500&ndash;$3,000</span><span class="ts-r">Retainer: $500/mo</span></div>
+        <div class="tinfo"><h3>Full AI Growth Stack</h3><span class="tl">Complete automation infrastructure for a scaling business.</span></div>
+        <div class="tsum"><span class="ts-i">Install: $4,000-$6,500</span><span class="ts-m">Monthly: $2,500-$3,000</span><span class="ts-r">Retainer: $500/mo</span></div>
         <div class="tchev"><div class="chev"><svg viewBox="0 0 12 8"><polyline points="1,1 6,7 11,1"/></svg></div></div>
       </div>
       <div class="tier-body"><div class="tbi"><div class="tbc">
         <div class="fee-row">
-          <div class="fbox"><span class="flbl fl-i">Install Fee</span><span class="famt">$4,000&ndash;$6,500</span><span class="fnote">One-time. Full stack &mdash; all systems, LTV scoring, campaign infrastructure &amp; launch</span></div>
-          <div class="fbox"><span class="flbl fl-m">Monthly Fee</span><span class="famt">$2,500&ndash;$3,000</span><span class="fnote">Ongoing. Full system management, all campaigns &amp; optimization</span></div>
+          <div class="fbox"><span class="flbl fl-i">Install Fee</span><span class="famt">$4,000-$6,500</span><span class="fnote">One-time. Full stack: all systems, LTV scoring, campaign infrastructure &amp; launch</span></div>
+          <div class="fbox"><span class="flbl fl-m">Monthly Fee</span><span class="famt">$2,500-$3,000</span><span class="fnote">Ongoing. Full system management, all campaigns &amp; optimization</span></div>
           <div class="fbox"><span class="flbl fl-r">Retainer</span><span class="famt">$500/mo</span><span class="fnote">Bi-weekly strategy calls, new campaign builds &amp; dedicated account support</span></div>
         </div>
         <span class="inc-lbl">What's included</span>
@@ -391,27 +526,27 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
           <li>Everything in Tiers 1 &amp; 2</li>
           <li>Treatment-cycle reactivation (Botox 12wk, fillers 11mo, laser session 5)</li>
           <li>Google review generation (automated 48hr post-visit)</li>
-          <li>Seasonal campaign automation &mdash; holiday, event, local</li>
+          <li>Seasonal campaign automation: holiday, event, local</li>
           <li>Client lifetime value scoring &amp; VIP tier identification</li>
           <li>Educational content distribution (social + email)</li>
           <li>Bi-weekly strategy calls + dedicated account manager</li>
           <li>Multi-location support with cross-location routing</li>
         </ul>
-        <div class="roi"><span class="rl">ROI Snapshot</span><p>Treatment-cycle reactivation alone &mdash; 20 clients rebooking one extra session per quarter at $450 avg &mdash; generates $9,000/quarter. Review automation compounds organic growth at zero ad spend.</p></div>
+        <div class="roi"><span class="rl">ROI Snapshot</span><p>Treatment-cycle reactivation alone, with 20 clients rebooking one extra session per quarter at $450 avg, generates $9,000/quarter. Review automation compounds organic growth at zero ad spend.</p></div>
       </div></div></div>
     </div>
 
     <div class="tier" id="p4">
       <div class="tier-hd" onclick="tog('p4')">
         <span class="tnum" style="font-family:'Syne',sans-serif;font-size:17px;font-style:normal;font-weight:800;letter-spacing:0.08em;min-width:80px;justify-content:center;">ENT</span>
-        <div class="tinfo"><h3>Enterprise / Multi-Location</h3><span class="tl">Franchise-wide automation &mdash; custom scoped per location count</span></div>
+        <div class="tinfo"><h3>Enterprise / Multi-Location</h3><span class="tl">Franchise-wide automation, custom scoped per location count.</span></div>
         <div class="tsum"><span class="ts-i">Install: Custom</span><span class="ts-m">Monthly: Custom</span><span class="ts-r">Retainer: Included</span></div>
         <div class="tchev"><div class="chev"><svg viewBox="0 0 12 8"><polyline points="1,1 6,7 11,1"/></svg></div></div>
       </div>
       <div class="tier-body"><div class="tbi"><div class="tbc">
         <div class="fee-row">
-          <div class="fbox"><span class="flbl fl-i">Install Fee</span><span class="famt">Custom</span><span class="fnote">Scoped per location count. Base build + $800&ndash;$1,200 per additional location</span></div>
-          <div class="fbox"><span class="flbl fl-m">Monthly Fee</span><span class="famt">Custom</span><span class="fnote">All locations. Typically $700&ndash;$900/location + shared infrastructure</span></div>
+          <div class="fbox"><span class="flbl fl-i">Install Fee</span><span class="famt">Custom</span><span class="fnote">Scoped per location count. Base build + $800-$1,200 per additional location</span></div>
+          <div class="fbox"><span class="flbl fl-m">Monthly Fee</span><span class="famt">Custom</span><span class="fnote">All locations. Typically $700-$900/location + shared infrastructure</span></div>
           <div class="fbox"><span class="flbl fl-r">Retainer</span><span class="famt">Included</span><span class="fnote">Dedicated account manager, bi-weekly calls &amp; franchise rollout support</span></div>
         </div>
         <span class="inc-lbl">What's included</span>
@@ -425,20 +560,26 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
           <li>Priority deployment and white-glove setup</li>
           <li>Custom integrations on request</li>
         </ul>
-        <div class="roi"><span class="rl">Example &mdash; 4 Location Franchise</span><p>Full Tier 3 across 4 locations: ~$8,000&ndash;$10,000 install + $3,500&ndash;$4,500/mo. Conservative recovery of $9,000+/mo across all locations. Year one total value: $50,000&ndash;$65,000+.</p></div>
+        <div class="roi"><span class="rl">Example: 4-Location Franchise</span><p>Full Tier 3 across 4 locations: ~$8,000-$10,000 install + $3,500-$4,500/mo. Conservative recovery of $9,000+/mo across all locations. Year one total value: $50,000-$65,000+.</p></div>
       </div></div></div>
     </div>
 
   </div>
 
-  <p class="stag" style="margin-top:60px">Year One Investment</p>
-  <p class="bt">Install fee paid once. Monthly + retainer recurring. No hidden fees, no locked contracts.</p>
-  <table class="tbl">
+  <div class="guarantee rv">
+    <span class="gnum">30 days</span>
+    <div>
+      <h3>The performance guarantee</h3>
+      <p>If your system doesn't generate at least 5 new bookings or qualified leads in the first 30 days, we refund your full setup fee and keep running it free for another month. Month to month after that. No locked contracts.</p>
+    </div>
+  </div>
+
+  <table class="tbl rv">
     <thead><tr><th>Tier</th><th>Install (one-time)</th><th>Monthly + Retainer</th><th>Year 1 Total</th></tr></thead>
     <tbody>
-      <tr><td>Tier 1 &mdash; Receptionist</td><td>$2,000 avg</td><td>$700/mo</td><td class="hi">$10,400</td></tr>
-      <tr><td>Tier 2 &mdash; Nurture Engine</td><td>$3,250 avg</td><td>$1,650/mo</td><td class="hi">$23,050</td></tr>
-      <tr><td>Tier 3 &mdash; Full Stack</td><td>$5,250 avg</td><td>$3,250/mo</td><td class="hi">$44,250</td></tr>
+      <tr><td>Tier 1: Receptionist</td><td>$2,000 avg</td><td>$700/mo</td><td class="hi">$10,400</td></tr>
+      <tr><td>Tier 2: Nurture Engine</td><td>$3,250 avg</td><td>$1,650/mo</td><td class="hi">$23,050</td></tr>
+      <tr><td>Tier 3: Full Stack</td><td>$5,250 avg</td><td>$3,250/mo</td><td class="hi">$44,250</td></tr>
       <tr class="tr-tot"><td>Enterprise (4 locations)</td><td>~$9,000</td><td>~$4,000/mo</td><td class="hi">~$57,000</td></tr>
     </tbody>
   </table>
@@ -446,21 +587,52 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
 
 <hr class="sep">
 
+<!-- FAQ -->
+<div class="section" id="faq">
+  <h2 class="rv">Questions every owner asks <em>before they call.</em></h2>
+  <div class="faq-grid rv">
+    <div class="faq-item">
+      <h4>Is this a real AI or one of those phone trees?</h4>
+      <p>A real AI. It holds natural conversations, answers questions specific to your business, and books real appointments. Don't take our word for it: call (360) 745-1628 and have a conversation with it right now.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How long does setup take?</h4>
+      <p>7 to 14 days from signed agreement to launch. We build, you review and approve, then it goes live. Most clients see their first AI-captured booking within the first week.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need technical skills?</h4>
+      <p>None. We integrate with the scheduling system and tools you already use. You keep running your business; the system runs in the background. We handle every technical detail.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Will it sound like my business?</h4>
+      <p>Yes. Voice, tone, terminology, and policies are all trained to your brand. Your clients hear your business, not a generic bot. You approve the voice before launch.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What happens with urgent or complex calls?</h4>
+      <p>The AI does a warm handoff: it recognizes urgency, takes the details, and escalates to you or your team immediately. Nothing important sits in a voicemail box.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What if it doesn't work for my business?</h4>
+      <p>The 30-day guarantee covers you: 5 new bookings or qualified leads in the first month, or your setup fee back plus another month free. And it's month to month, so you're never locked in.</p>
+    </div>
+  </div>
+</div>
+
 <!-- CONTACT -->
 <div class="section" id="contact">
-  <div class="contact-block">
+  <div class="contact-block rv">
     <div class="contact-orb"></div>
-    <p class="stag" style="justify-content:center;margin-bottom:24px">Get Started</p>
-    <h2>Let&rsquo;s Talk About <em>Your Business</em></h2>
-    <p class="sub">We start every engagement with a free 15-minute audit &mdash; no pitch deck, no pressure. Just an honest look at where your business is leaking revenue and what we can do about it.</p>
+    <h2>Hear it before <em>you buy it.</em></h2>
+    <p class="sub">Start with a free 15-minute audit. No pitch deck, no pressure. Just an honest look at where your business is leaking revenue and what we can do about it.</p>
     <div class="contact-cards">
-      <div class="cc"><span class="cc-lbl">Call or Text</span><span class="cc-val"><a href="tel:+12362050807">+1 (236) 205-0807</a></span></div>
-      <div class="cc"><span class="cc-lbl">Email</span><span class="cc-val"><a href="mailto:danciampelletti@wavelengthsolutions.co">danciampelletti@wavelengthsolutions.co</a></span></div>
-      <div class="cc"><span class="cc-lbl">Instagram</span><span class="cc-val"><a href="https://instagram.com/wavelengthsolutions" target="_blank">@wavelengthsolutions</a></span></div>
+      <div class="cc"><span class="cc-lbl">Talk to the AI</span><span class="cc-val"><a href="tel:+13607451628">+1 (360) 745-1628</a></span></div>
+      <div class="cc"><span class="cc-lbl">Call or Text Danny</span><span class="cc-val"><a href="tel:+12362050807">+1 (236) 205-0807</a></span></div>
+      <div class="cc"><span class="cc-lbl">Email</span><span class="cc-val"><a href="mailto:danciampelletti@wavelengthsolutions.co">danciampelletti@<br>wavelengthsolutions.co</a></span></div>
+      <div class="cc"><span class="cc-lbl">Instagram</span><span class="cc-val"><a href="https://instagram.com/wavelengthsolutions" target="_blank" rel="noopener">@wavelengthsolutions</a></span></div>
     </div>
     <div class="cta-group">
-      <a href="https://cal.com/daniel-ciampelletti-r2i2t4" class="btn-primary">Book Free Audit</a>
-      <a href="tel:+12362050807" class="btn-ghost">Call +1 (236) 205-0807</a>
+      <a href="tel:+13607451628" class="btn-primary">Call the AI: (360) 745-1628</a>
+      <a href="https://cal.com/daniel-ciampelletti-r2i2t4" class="btn-ghost">Book a Free Audit</a>
     </div>
   </div>
 </div>
@@ -470,12 +642,12 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
   <ul class="foot-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="tel:+12362050807">+1 (236) 205-0807</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="https://www.linkedin.com/in/daniel-ciampelletti-4b119239b/" target="_blank" rel="noopener">LinkedIn</a></li>
     <li><a href="mailto:danciampelletti@wavelengthsolutions.co">danciampelletti@wavelengthsolutions.co</a></li>
     <li><a href="/privacy.html">Privacy Policy</a></li>
   </ul>
-  <div class="foot-copy">&copy; 2026 Wavelength Solutions &middot; Fort Langley, BC</div>
+  <div class="foot-copy">&copy; 2026 Wavelength Solutions &middot; Langley, BC</div>
 </footer>
 
 <script>
@@ -490,17 +662,16 @@ const ham=document.querySelector('.ham');
 const navLinks=document.querySelector('.nav-links');
 ham.addEventListener('click',()=>{ham.classList.toggle('open');navLinks.classList.toggle('open');});
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');navLinks.classList.remove('open');}));
-const obs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}
-  });
-},{threshold:0.1});
-document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
-  el.style.opacity='0';
-  el.style.transform='translateY(24px)';
-  el.style.transition='opacity 0.6s ease, transform 0.6s ease';
-  obs.observe(el);
-});
+// Scroll reveal
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce){
+  document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+}else{
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);} });
+  },{threshold:0.12});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+}
 </script>
 
 <!-- CHAT WIDGET -->
@@ -530,6 +701,19 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
 #wl-send:hover{background:var(--wave-light);}
 #wl-send:disabled{opacity:0.4;cursor:not-allowed;}
 #wl-send svg{width:16px;height:16px;fill:white;}
+.wl-lead-card{background:rgba(120,100,255,0.07);border:1px solid rgba(120,100,255,0.28);border-radius:12px;padding:16px;margin:4px 0;align-self:stretch;}
+.wl-lead-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:3px;}
+.wl-lead-sub{font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.5;}
+.wl-lead-fields{display:flex;flex-direction:column;gap:8px;margin-bottom:10px;}
+.wl-lead-inp{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 12px;color:var(--text);font-family:'Syne',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s;}
+.wl-lead-inp:focus{border-color:var(--wave);}
+.wl-lead-inp.err{border-color:rgba(255,80,80,0.55);}
+.wl-lead-actions{display:flex;gap:8px;align-items:center;}
+.wl-lead-submit{background:var(--wave);color:white;border:none;padding:8px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Syne',sans-serif;transition:background 0.2s;letter-spacing:0.04em;}
+.wl-lead-submit:hover{background:var(--wave-light);}
+.wl-lead-skip{background:none;border:none;color:var(--muted);padding:4px 8px;font-size:12px;cursor:pointer;font-family:'Syne',sans-serif;transition:color 0.2s;text-decoration:underline;text-underline-offset:2px;}
+.wl-lead-skip:hover{color:var(--text);}
+.wl-lead-success{font-size:13px;color:var(--text);line-height:1.6;}
 @media(max-width:500px){#wl-chat{right:8px;left:8px;bottom:88px;width:auto;max-height:70vh;}}
 </style>
 
@@ -546,7 +730,7 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
     </div>
   </div>
   <div id="wl-msgs">
-    <div class="wl-msg bot">Hey! I'm the Wavelength AI assistant. I can answer questions about our services, pricing, or help you book a free discovery call with Danny. What brings you here today?</div>
+    <div class="wl-msg bot">Hey! I'm the Wavelength AI assistant. Ask me about our services or pricing, or call our live AI receptionist at (360) 745-1628 to hear the product in action. What brings you here today?</div>
   </div>
   <div id="wl-input-row">
     <input id="wl-input" placeholder="Type a message..." autocomplete="off">
@@ -569,30 +753,34 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
   var botMsgCount  = 0;
   var leadCaptured = false;
 
-  // ── Offline keyword fallbacks ─────────────────────────────────────────────
+  // Offline keyword fallbacks
   var KB = [
     {k:['price','cost','how much','pricing','fee','invest','pay','afford','budget','rate'],
-     r:"Great question! Our AI Receptionist starts at $1,500\u2013$2,500 for the install and $600\u2013$800/month. We also have higher tiers that include membership funnels, reactivation sequences, and full growth automation. Want me to connect you with Danny to walk through which tier fits your business? Call or text (236) 205-0807."},
+     r:"Great question! Our AI Receptionist starts at $1,500-$2,500 for the install and $600-$800/month. Higher tiers add membership funnels, reactivation sequences, and full growth automation. Want Danny to walk you through which tier fits your business? Call or text (236) 205-0807."},
     {k:['tier','plan','package','option','level'],
-     r:"We have three tiers: Tier 1 is the Always-On Receptionist ($600\u2013$800/mo), Tier 2 adds smart funnels and follow-up automation ($1,200\u2013$1,500/mo), and Tier 3 is the full AI Growth Stack ($2,500\u2013$3,000/mo). We also do custom Enterprise pricing for multi-location businesses. Danny can help you figure out the right fit \u2014 (236) 205-0807."},
-    {k:['receptionist','call','phone','voice','answer','after hour','24/7','miss'],
-     r:"Our AI Receptionist answers your calls and messages 24/7 \u2014 after hours, weekends, holidays. It handles FAQs, books appointments directly into your scheduling system, and does warm handoffs for urgent calls. Branded to sound like your business. Most clients see ROI within the first 2 weeks."},
+     r:"We have three tiers: Tier 1 is the Always-On Receptionist ($600-$800/mo), Tier 2 adds smart funnels and follow-up automation ($1,200-$1,500/mo), and Tier 3 is the full AI Growth Stack ($2,500-$3,000/mo). We also do custom Enterprise pricing for multi-location businesses. Danny can help you figure out the right fit: (236) 205-0807."},
+    {k:['receptionist','voice','answer','after hour','24/7','miss'],
+     r:"Our AI Receptionist answers your calls and messages 24/7: after hours, weekends, holidays. It handles FAQs, books appointments directly into your scheduling system, and does warm handoffs for urgent calls. Want to hear it? Call the live line right now: (360) 745-1628."},
+    {k:['ads','advertising','meta','google','facebook','instagram ads','campaign'],
+     r:"Yes, we run managed Meta and Google ad campaigns: built, managed, and reported by us, with leads feeding straight into your AI receptionist so nothing slips. Ads engagements are scoped individually. Book a free audit with Danny to talk numbers: (236) 205-0807."},
+    {k:['website','web design','site','landing page'],
+     r:"We build fast, premium websites designed to convert visitors into booked appointments, with an AI assistant answering chat right on the page (like this one). Website projects are scoped per engagement. Reach Danny at (236) 205-0807 to talk about yours."},
     {k:['how','work','process','start','begin','get started','next step','onboard'],
-     r:"Simple: we start with a free 15-minute discovery call where Danny audits your current setup. If it\u2019s a fit, we build your system in 7\u201314 days, and you start seeing results immediately. No long contracts \u2014 month-to-month. Want to book that call? Reach Danny at (236) 205-0807 or danciampelletti@wavelengthsolutions.co"},
+     r:"Simple: we start with a free 15-minute audit call where Danny looks at your current setup. If it's a fit, we build your system in 7-14 days, and you start seeing results immediately. No long contracts, month-to-month. Want to book that call? Reach Danny at (236) 205-0807 or danciampelletti@wavelengthsolutions.co"},
     {k:['guarantee','risk','refund','promise','what if'],
-     r:"We offer a 30-day performance guarantee: if the system doesn\u2019t generate at least 5 new bookings or qualified leads in the first 30 days, we refund your setup fee completely AND keep running it free for another month. Zero risk."},
+     r:"We offer a 30-day performance guarantee: if the system doesn't generate at least 5 new bookings or qualified leads in the first 30 days, we refund your setup fee completely AND keep running it free for another month. Zero risk."},
     {k:['who','what business','industry','niche','serve','client','work with'],
-     r:"We work with high-end service businesses across Canada \u2014 med spas, aesthetic clinics, wellness centres, premium salons, home services, property management, and multi-location franchises. Basically any business where a missed inquiry means real revenue lost."},
+     r:"We work with high-end service businesses across Canada: med spas, aesthetic clinics, wellness centres, premium salons, home services, property management, and multi-location franchises. Basically any business where a missed inquiry means real revenue lost."},
     {k:['danny','founder','team','who are you','about'],
-     r:"Wavelength Solutions was founded by Danny Ciampelletti, based in Fort Langley, BC. Danny builds custom AI automation systems that help service businesses capture every inquiry and grow without adding staff. You can reach him directly at (236) 205-0807."},
+     r:"Wavelength Solutions was founded by Danny Ciampelletti, based in Langley, BC. Danny builds custom AI automation systems from scratch (he built his own AI operating system before selling a single client system). You can reach him directly at (236) 205-0807."},
     {k:['book','call','meet','schedule','appointment','talk','consult','demo'],
-     r:"I\u2019d love to get you connected with Danny! You can book a free discovery call right now at " + CAL_URL + ", or reach him directly at (236) 205-0807."},
+     r:"Two options: call our live AI line at (360) 745-1628 to hear the product right now, or book a free audit call with Danny at " + CAL_URL + ". You can also reach him directly at (236) 205-0807."},
     {k:['audit','enterprise','compliance','security','workflow','corporate'],
-     r:"We also offer enterprise-level AI auditing and workflow innovation for larger organizations \u2014 including compliance mapping, security assessments, and custom AI workflow builds. These are scoped individually. Reach out to Danny to discuss: (236) 205-0807."},
+     r:"We also offer enterprise-level AI auditing and workflow innovation for larger organizations, including compliance mapping, security assessments, and custom AI workflow builds. These are scoped individually. Reach out to Danny to discuss: (236) 205-0807."},
     {k:['hi','hello','hey','sup','yo','good morning','good evening'],
-     r:"Hey there! Welcome to Wavelength Solutions. I can tell you about our services, pricing, or help you get in touch with Danny for a free business audit. What are you curious about?"},
+     r:"Hey there! Welcome to Wavelength Solutions. I can tell you about our services and pricing, or help you get in touch with Danny for a free business audit. What are you curious about?"},
   ];
-  var FALLBACK = "That\u2019s a great question \u2014 Danny can give you a much better answer on a quick call. Want to reach out? Call or text (236) 205-0807, or email danciampelletti@wavelengthsolutions.co. He usually responds within the hour.";
+  var FALLBACK = "That's a great question. Danny can give you a much better answer on a quick call: (236) 205-0807, or email danciampelletti@wavelengthsolutions.co. He usually responds within the hour.";
 
   function matchKB(text) {
     var t = text.toLowerCase(), best = null, bestScore = 0;
@@ -604,7 +792,7 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
     return bestScore > 0 ? best.r : FALLBACK;
   }
 
-  // ── Lead capture card (built with DOM methods — no innerHTML) ─────────────
+  // Lead capture card (DOM methods, no innerHTML)
   function el(tag, cls, text) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -629,12 +817,12 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
     var card   = el('div', 'wl-lead-card');
     card.id    = 'wl-lead-card';
     var title  = el('div', 'wl-lead-title', 'Want Danny to follow up with you?');
-    var sub    = el('div', 'wl-lead-sub',   'Leave your info and he\u2019ll reach out within the hour.');
+    var sub    = el('div', 'wl-lead-sub',   'Leave your info and he’ll reach out within the hour.');
     var fields = el('div', 'wl-lead-fields');
     var nameEl = inp2('wl-lead-inp', 'wl-lead-name', 'text', 'Your name', 100, 'name');
     var emailEl= inp2('wl-lead-inp', 'wl-lead-email','email','your@email.com',200,'email');
     var actions= el('div', 'wl-lead-actions');
-    var submitBtn = btn2('wl-lead-submit', 'wl-lead-submit', 'Send \u2192');
+    var submitBtn = btn2('wl-lead-submit', 'wl-lead-submit', 'Send');
     var skipBtn   = btn2('wl-lead-skip',   'wl-lead-skip',   'No thanks');
 
     fields.appendChild(nameEl);
@@ -679,7 +867,6 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
     if (card) {
       var firstName = name ? ', ' + name.split(' ')[0] : '';
       var success = el('div', 'wl-lead-success');
-      // Build success message with safe DOM nodes (no innerHTML)
       success.appendChild(document.createTextNode('Got it' + firstName + '! Danny will be in touch at '));
       var strong = document.createElement('strong');
       strong.textContent = email;
@@ -691,7 +878,6 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
     }
   }
 
-  // ── UI helpers ────────────────────────────────────────────────────────────
   btn.addEventListener('click', function() {
     btn.classList.toggle('open');
     chat.classList.toggle('open');
@@ -711,7 +897,6 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
     return d;
   }
 
-  // ── Send message ──────────────────────────────────────────────────────────
   async function sendMsg() {
     var text = inp.value.trim();
     if (!text || sending) return;
@@ -723,7 +908,7 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
 
     var typing = document.createElement('div');
     typing.className = 'wl-msg bot typing';
-    typing.textContent = 'Thinking\u2026';
+    typing.textContent = 'Thinking…';
     msgs.appendChild(typing);
     msgs.scrollTop = msgs.scrollHeight;
 
@@ -762,4 +947,3 @@ document.querySelectorAll('.serve-card,.build-card').forEach(el=>{
 </script>
 </body>
 </html>
-<!-- deploy trigger -->
